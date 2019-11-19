@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+.inventory-keys {
+  display: none;
+}
+
 .table {
   width: calc(100vw - 32px);
   margin: $center;
@@ -28,6 +32,63 @@
       }
       &--value {
         @include mobile-paragraph-lists;
+      }
+    }
+  }
+}
+
+@include medium {
+  .inventory-keys {
+    width: calc(100vw - 48px);
+    margin: $center;
+    display: flex;
+    justify-content: space-evenly;
+    &__content {
+      width: 100px;
+      @include labels;
+    }
+
+    :first-child {
+      width: 224px;
+    }
+  }
+
+  .table {
+    width: calc(100vw - 48px);
+
+    //Issue with the padding: mockup says the row height should be 100px and padding 24px but those dimensions don't
+    //display as they appear on the screen. Group decision??
+    &-row {
+      margin-top: unset;
+      padding: 24px 0;
+      height: 100px;
+      flex-direction: row;
+      justify-content: space-evenly;
+
+      &__content {
+        align-items: space-between;
+        justify-content: center;
+        margin-bottom: unset;
+        width: 100px;
+
+        &--key {
+          display: none;
+        }
+
+        &--bold,
+        &--value {
+          margin-bottom: unset;
+          @include paragraphs;
+        }
+
+        &--bold {
+          @include subheader;
+        }
+      }
+
+      //Setting a larger width for this single flex item in the row
+      :first-child {
+        width: 224px;
       }
     }
   }

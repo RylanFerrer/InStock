@@ -35,10 +35,5 @@ export default function ProductTable(props) {
     );
   });
 
-  return (
-    <>
-      <h1>Still here</h1>
-      {tableDisplay}
-    </>
-  );
+  return <>{tableDisplay}</>;
 }

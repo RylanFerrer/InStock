@@ -33,7 +33,6 @@ export default class CreateNew extends Component {
                     <button className = "modal__content-submit">Save</button>
                     <h5 className = "modal__content-cancel">Cancel</h5>
                 </div>
-                
             </div>
         )
     }
