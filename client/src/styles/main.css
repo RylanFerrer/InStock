@@ -151,6 +151,23 @@ body {
   }
 }
 
+@media only screen and (min-width: 1440px) {
+  .inventory-keys {
+    width: calc(100vw - 360px);
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .table {
+    width: calc(100vw - 360px);
+  }
+  .table-row {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 .hidden {
   display: none;
 }

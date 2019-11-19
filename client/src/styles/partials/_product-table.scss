@@ -93,3 +93,18 @@
     }
   }
 }
+
+@include large {
+  .inventory-keys {
+    width: calc(100vw - 360px);
+    justify-content: space-between;
+  }
+
+  .table {
+    width: calc(100vw - 360px);
+
+    &-row {
+      justify-content: space-between;
+    }
+  }
+}
