@@ -1,0 +1,23 @@
+.inventory-heading {
+  display: flex;
+  flex-direction: column;
+  width: calc(100vw - 32px);
+  margin: $center;
+
+  &__title {
+    @include mobile-header;
+    margin-bottom: 16px;
+  }
+
+  &__searchbar {
+    width: 252px;
+    height: 48px;
+    background-color: $alabaster;
+    border: 1px solid $mercury;
+    border-radius: 4px;
+  }
+
+  &__searchbar::placeholder {
+    color: $black;
+  }
+}
