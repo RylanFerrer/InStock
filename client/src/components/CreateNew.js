@@ -55,8 +55,6 @@ export default class CreateNew extends React.Component {
                         </div>
                         
                         </div>
-                      
-                    
                         <h4 className = "modal__content-subheader">Description</h4>
                         <input className = "modal__content-input  modal__content-input--description" placeholder = "(Optional)"></input>
                         <button className = "modal__content-submit">Save</button>
