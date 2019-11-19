@@ -47,7 +47,7 @@ export default class Inventory extends Component {
             type="text"
             placeholder="Search"
           >
-            <img />
+            {/* <img src="../assets/Icons/SVG/Icon-search.svg" /> */}
           </input>
         </div>
         <div className="inventory-keys">
