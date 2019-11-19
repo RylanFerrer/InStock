@@ -6,7 +6,8 @@
         "partials/_variables.scss",
         "partials/_breakpoints.scss",
         "partials/_russellfonts.scss",
-        "partials/_product-table.scss"
+        "partials/_product-table.scss",
+        "partials/_create-new-form.scss"
     ],
     "names": [],
     "file": "main.css"
