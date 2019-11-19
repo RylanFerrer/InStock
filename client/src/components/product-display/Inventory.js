@@ -44,6 +44,13 @@ export default class Inventory extends Component {
           <h1>Inventory</h1>
           <input type="text" />
         </div>
+        <div className="inventory-keys">
+          <span className="inventory-keys__content">Item</span>
+          <span className="inventory-keys__content">Last Ordered</span>
+          <span className="inventory-keys__content">Location</span>
+          <span className="inventory-keys__content">Quantity</span>
+          <span className="inventory-keys__content">Status</span>
+        </div>
         <ProductTable items={this.array} />
       </>
     );
