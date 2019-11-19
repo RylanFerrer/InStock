@@ -3,6 +3,7 @@
   flex-direction: column;
   width: calc(100vw - 32px);
   margin: $center;
+  margin-top: 32px;
 
   &__title {
     @include mobile-header;
@@ -15,9 +16,49 @@
     background-color: $alabaster;
     border: 1px solid $mercury;
     border-radius: 4px;
+    display: flex;
+    align-items: center;
+
+    &-icon {
+      height: 20px;
+      padding: 0 16px;
+    }
+
+    &-input {
+      width: 200px;
+      border: none;
+      background-color: $alabaster;
+      height: 46px;
+    }
+
+    &-input::placeholder {
+      color: $black;
+    }
   }
 
   &__searchbar::placeholder {
     color: $black;
+  }
+}
+
+@include medium {
+  .inventory-heading {
+    width: calc(100vw - 48px);
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+
+    &__title {
+      @include header;
+      margin-bottom: unset;
+    }
+  }
+}
+
+@include large {
+  .inventory-heading {
+    width: calc(100vw - 360px);
+    margin: 48px auto;
   }
 }
