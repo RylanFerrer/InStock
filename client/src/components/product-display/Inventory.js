@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ProductTable from "./ProductTable";
+import SearchIcon from "../../assets/Icons/SVG/Icon-search.svg";
 
 export default class Inventory extends Component {
   array = [
@@ -42,13 +43,17 @@ export default class Inventory extends Component {
       <>
         <div className="inventory-heading">
           <h1 className="inventory-heading__title">Inventory</h1>
-          <input
-            className="inventory-heading__searchbar"
-            type="text"
-            placeholder="Search"
-          >
-            {/* <img src="../assets/Icons/SVG/Icon-search.svg" /> */}
-          </input>
+          <div className="inventory-heading__searchbar">
+            <img
+              className="inventory-heading__searchbar-icon"
+              src={SearchIcon}
+            />
+            <input
+              className="inventory-heading__searchbar-input"
+              type="text"
+              placeholder="Search"
+            ></input>
+          </div>
         </div>
         <div className="inventory-keys">
           <span className="inventory-keys__content">Item</span>
