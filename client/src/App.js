@@ -1,7 +1,7 @@
 import React from "react";
 import CreateNew from "./components/CreateNew";
-import Navbar from "./components/Navbar";
-import Locations from "./components/Locations";
+import Navbar from "../src/components/navbar";
+import Locations from "../src/components/locations";
 import { BrowserRouter } from "react-router-dom";
 import { Route, Switch } from "react-router-dom";
 import "./styles/main.css";
