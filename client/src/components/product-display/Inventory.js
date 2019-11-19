@@ -40,9 +40,15 @@ export default class Inventory extends Component {
   render() {
     return (
       <>
-        <div>
-          <h1>Inventory</h1>
-          <input type="text" />
+        <div className="inventory-heading">
+          <h1 className="inventory-heading__title">Inventory</h1>
+          <input
+            className="inventory-heading__searchbar"
+            type="text"
+            placeholder="Search"
+          >
+            {/* <img src="../assets/Icons/SVG/Icon-search.svg" /> */}
+          </input>
         </div>
         <div className="inventory-keys">
           <span className="inventory-keys__content">Item</span>
