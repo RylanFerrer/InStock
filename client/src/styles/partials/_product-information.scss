@@ -1,0 +1,165 @@
+.header {
+  width: calc(100vw - 32px);
+  margin: $center;
+  margin-top: 32px;
+  margin-bottom: 40px;
+
+  &-container {
+    display: flex;
+    align-items: center;
+
+    &__image {
+      height: 24px;
+      margin-right: 16px;
+    }
+  }
+
+  &__stock-status {
+    margin-top: 16px;
+    width: 88px;
+    height: 24px;
+    //green has to change color
+    background-color: green;
+    color: $alabaster;
+    @include mobile-subheader;
+    text-align: center;
+    padding-top: 2px;
+    border-radius: 4px;
+  }
+}
+
+.item {
+  width: calc(100vw - 32px);
+  margin: $center;
+  margin-bottom: 40px;
+  &-description {
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+
+    &__heading {
+      margin-bottom: 16px;
+      @include labels;
+    }
+
+    &__content {
+      @include paragraphs;
+    }
+  }
+
+  &-info {
+    &__content {
+      margin-bottom: 24px;
+      display: flex;
+      flex-direction: column;
+
+      &-key {
+        margin-bottom: 16px;
+        @include labels;
+      }
+
+      &-value {
+        @include paragraphs;
+      }
+    }
+
+    &__categories {
+      display: flex;
+      flex-direction: column;
+
+      &-key {
+        margin-bottom: 16px;
+        @include labels;
+      }
+
+      &-value {
+        @include paragraphs;
+      }
+    }
+  }
+}
+
+.edit-product {
+  width: calc(100vw - 32px);
+  margin-left: 16px;
+  height: 48px;
+  border: none;
+  border-radius: 4px;
+  color: $alabaster;
+  background-color: $instockbluedark;
+  @include mobile-subheader;
+  text-transform: uppercase;
+}
+
+@include medium {
+  .header {
+    width: calc(100vw - 48px);
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid $mercury;
+    padding-bottom: 40px;
+
+    &-container {
+      align-items: center;
+
+      &__image {
+        margin-bottom: 6px;
+      }
+      &__title {
+        @include header;
+      }
+    }
+
+    &__stock-status {
+      margin: 0 0 0 24px;
+    }
+  }
+
+  .item {
+    width: calc(100vw - 48px);
+
+    border-bottom: 2px solid $mercury;
+    &-info {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      &__content {
+        width: 50%;
+      }
+      &__categories {
+        width: 100%;
+        padding-bottom: 40px;
+      }
+    }
+  }
+
+  .edit-product {
+    width: 160px;
+    float: right;
+    margin-right: 24px;
+  }
+}
+
+@include large {
+  .header {
+    width: calc(100vw - 360px);
+  }
+
+  .item {
+    width: calc(100vw - 360px);
+    display: flex;
+    &-description {
+      width: 50%;
+      padding-right: 24px;
+    }
+
+    &-info {
+      width: 50%;
+    }
+  }
+
+  .edit-product {
+    margin-right: 180px;
+  }
+}

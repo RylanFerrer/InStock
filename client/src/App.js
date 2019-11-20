@@ -6,6 +6,7 @@ import { BrowserRouter } from "react-router-dom";
 import { Route, Switch } from "react-router-dom";
 import "./styles/main.css";
 import Inventory from "./components/product-display/Inventory";
+import ProductInformation from "./components/ProductInformation";
 
 const locationsInfo = [
   {
@@ -90,9 +91,10 @@ export default class App extends React.Component {
 
   render() {
     console.log(locationsInfo);
+    // console.log(locationsInfo);
     return (
       <div className="App">
-        <BrowserRouter>
+        {/* <BrowserRouter>
           <Navbar />
 
           <Switch>
@@ -105,6 +107,10 @@ export default class App extends React.Component {
           </Switch>
         </BrowserRouter>
         <Inventory />
+        </BrowserRouter> */}
+        <ProductInformation />
+        {/* <CreateNew locations={this.state.locationsInfo} /> */}
+        {/* <Inventory /> */}
       </div>
     );
   }
