@@ -8,110 +8,105 @@ import "./styles/main.css";
 import Inventory from "./components/product-display/Inventory";
 import ProductInformation from "./components/ProductInformation";
 
-const locationsInfo = [
-  {
-    warehouse1: "Warehouse Number 1",
-    warehouse2: "469 King St W, Toronto, ON",
-    country: "Canada",
-    city: "Toronto",
-    contact: "Mara Weinberg Warehouse Manager",
-    contactinfo: "+1 416 678 2345 weinberg@instack.com",
-    categories:
-      " Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation"
-  },
-  {
-    warehouse1: "Warehouse Number 1",
-    warehouse2: "469 King St W, Toronto, ON",
-    contact: "Mara Weinberg Warehouse Manager",
-    contactinfo: "+1 416 678 2345 weinberg@instack.com",
-    categories:
-      " Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation"
-  },
-  {
-    warehouse1: "Warehouse Number 1",
-    warehouse2: "469 King St W, Toronto, ON",
-    contact: "Mara Weinberg Warehouse Manager",
-    contactinfo: "+1 416 678 2345 weinberg@instack.com",
-    categories:
-      " Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation"
-  },
-  {
-    warehouse1: "Warehouse Number 1",
-    warehouse2: "469 King St W, Toronto, ON",
-    contact: "Mara Weinberg Warehouse Manager",
-    contactinfo: "+1 416 678 2345 weinberg@instack.com",
-    categories:
-      " Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation"
-  },
-  {
-    warehouse1: "Warehouse Number 1",
-    warehouse2: "469 King St W, Toronto, ON",
-    contact: "Mara Weinberg Warehouse Manager",
-    contactinfo: "+1 416 678 2345 weinberg@instack.com",
-    categories:
-      " Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation"
-  },
-  {
-    warehouse1: "Warehouse Number 1",
-    warehouse2: "469 King St W, Toronto, ON",
-    contact: "Mara Weinberg Warehouse Manager",
-    contactinfo: "+1 416 678 2345 weinberg@instack.com",
-    categories:
-      " Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation"
-  },
-  {
-    warehouse1: "Warehouse Number 1",
-    warehouse2: "469 King St W, Toronto, ON",
-    contact: "Mara Weinberg Warehouse Manager",
-    contactinfo: "+1 416 678 2345 weinberg@instack.com",
-    categories:
-      " Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation"
-  },
-  {
-    warehouse1: "Warehouse Number 1",
-    warehouse2: "469 King St W, Toronto, ON",
-    contact: "Mara Weinberg Warehouse Manager",
-    contactinfo: "+1 416 678 2345 weinberg@instack.com",
-    categories:
-      " Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation"
-  },
-  {
-    warehouse1: "Warehouse Number 1",
-    warehouse2: "469 King St W, Toronto, ON",
-    contact: "Mara Weinberg Warehouse Manager",
-    contactinfo: "+1 416 678 2345 weinberg@instack.com",
-    categories:
-      " Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation"
-  }
-];
-export default class App extends React.Component {
-  state = {
-    locationsInfo: locationsInfo
-  };
-
+// const locationsInfo = [
+//   {
+//     warehouse1: "Warehouse Number 1",
+//     warehouse2: "469 King St W, Toronto, ON",
+//     country: "Canada",
+//     city: "Toronto",
+//     contact: "Mara Weinberg Warehouse Manager",
+//     contactinfo: "+1 416 678 2345 weinberg@instack.com",
+//     categories:
+//       " Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation"
+//   },
+//   {
+//     warehouse1: "Warehouse Number 1",
+//     warehouse2: "469 King St W, Toronto, ON",
+//     contact: "Mara Weinberg Warehouse Manager",
+//     contactinfo: "+1 416 678 2345 weinberg@instack.com",
+//     categories:
+//       " Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation"
+//   },
+//   {
+//     warehouse1: "Warehouse Number 1",
+//     warehouse2: "469 King St W, Toronto, ON",
+//     contact: "Mara Weinberg Warehouse Manager",
+//     contactinfo: "+1 416 678 2345 weinberg@instack.com",
+//     categories:
+//       " Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation"
+//   },
+//   {
+//     warehouse1: "Warehouse Number 1",
+//     warehouse2: "469 King St W, Toronto, ON",
+//     contact: "Mara Weinberg Warehouse Manager",
+//     contactinfo: "+1 416 678 2345 weinberg@instack.com",
+//     categories:
+//       " Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation"
+//   },
+//   {
+//     warehouse1: "Warehouse Number 1",
+//     warehouse2: "469 King St W, Toronto, ON",
+//     contact: "Mara Weinberg Warehouse Manager",
+//     contactinfo: "+1 416 678 2345 weinberg@instack.com",
+//     categories:
+//       " Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation"
+//   },
+//   {
+//     warehouse1: "Warehouse Number 1",
+//     warehouse2: "469 King St W, Toronto, ON",
+//     contact: "Mara Weinberg Warehouse Manager",
+//     contactinfo: "+1 416 678 2345 weinberg@instack.com",
+//     categories:
+//       " Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation"
+//   },
+//   {
+//     warehouse1: "Warehouse Number 1",
+//     warehouse2: "469 King St W, Toronto, ON",
+//     contact: "Mara Weinberg Warehouse Manager",
+//     contactinfo: "+1 416 678 2345 weinberg@instack.com",
+//     categories:
+//       " Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation"
+//   },
+//   {
+//     warehouse1: "Warehouse Number 1",
+//     warehouse2: "469 King St W, Toronto, ON",
+//     contact: "Mara Weinberg Warehouse Manager",
+//     contactinfo: "+1 416 678 2345 weinberg@instack.com",
+//     categories:
+//       " Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation"
+//   },
+//   {
+//     warehouse1: "Warehouse Number 1",
+//     warehouse2: "469 King St W, Toronto, ON",
+//     contact: "Mara Weinberg Warehouse Manager",
+//     contactinfo: "+1 416 678 2345 weinberg@instack.com",
+//     categories:
+//       " Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation"
+//   }
+// ];
+class App extends React.Component {
   render() {
-    console.log(locationsInfo);
-    // console.log(locationsInfo);
     return (
-      <div className="App">
-        {/* <BrowserRouter>
+      <>
+        <BrowserRouter>
           <Navbar />
 
           <Switch>
             <Route
               path="/locations"
               render={() => {
-                return <Locations locationsInfo={this.state.locationsInfo} />;
+                return <Locations />;
               }}
             ></Route>
           </Switch>
         </BrowserRouter>
         <Inventory />
-        </BrowserRouter> */}
-        {/* <ProductInformation /> */}
-        {/* <CreateNew locations={this.state.locationsInfo} /> */}
-        <Inventory />
-      </div>
+        {/* //   {/* <ProductInformation /> */}
+        // {/* <CreateNew locations={this.state.locationsInfo} /> */}
+        // <Inventory />
+      </>
     );
   }
 }
+// console.log(this.state.locationsInfo);
+export default App;
