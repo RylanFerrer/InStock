@@ -6,6 +6,7 @@ import { BrowserRouter } from "react-router-dom";
 import { Route, Switch } from "react-router-dom";
 import "./styles/main.css";
 import Inventory from "./components/product-display/Inventory";
+import ProductInformation from "./components/ProductInformation";
 
 const locationsInfo = [
   {
@@ -101,7 +102,8 @@ export default class App extends React.Component {
             ></Route>
           </Switch>
         </BrowserRouter> */}
-        <Inventory />
+        {/* <Inventory /> */}
+        <ProductInformation />
       </div>
     );
   }
