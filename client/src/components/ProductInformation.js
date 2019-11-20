@@ -3,7 +3,7 @@ import Arrow from "../assets/Icons/SVG/Icon-back-arrow.svg";
 
 export default class ProductInformation extends Component {
   info = {
-    item: "product name",
+    item: "Product Name",
     description: "description of item",
     ordered_by: "John Doe",
     last_ordered: "5/24/2018",
@@ -15,7 +15,7 @@ export default class ProductInformation extends Component {
     key: 123456
   };
   render() {
-    console.log(this.info);
+    // console.log(this.info);
     return (
       <>
         <header className="header">
@@ -26,21 +26,52 @@ export default class ProductInformation extends Component {
           <div className="header__stock-status">{this.info.status}</div>
         </header>
         <section className="item">
-          <div className="item-description">{this.info.description}</div>
-          <div className="item-info">
-            <span className="item-info__content">{this.info.ordered_by}</span>
-            <span className="item-info__content">
-              {this.info.reference_number}
-            </span>
-            <span className="item-info__content">{this.info.last_ordered}</span>
-            <span className="item-info__content">{this.info.location}</span>
-            <span className="item-info__content">{this.info.quantity}</span>
-            <span className="item-info__categories">
-              {this.info.categories}
+          <div className="item-description">
+            <span className="item-description__heading">Item description</span>
+            <span className="item-description__content">
+              {this.info.description}
             </span>
           </div>
+          <div className="item-info">
+            <div className="item-info__content">
+              <span className="item-info__content-key">Ordered By</span>
+              <span className="item-info__content-value">
+                {this.info.ordered_by}
+              </span>
+            </div>
+            <div className="item-info__content">
+              <span className="item-info__content-key">Reference Number</span>
+              <span className="item-info__content-value">
+                {this.info.reference_number}
+              </span>
+            </div>
+            <div className="item-info__content">
+              <span className="item-info__content-key">Last Ordered</span>
+              <span className="item-info__content-value">
+                {this.info.last_ordered}
+              </span>
+            </div>
+            <div className="item-info__content">
+              <span className="item-info__content-key">Location</span>
+              <span className="item-info__content-value">
+                {this.info.location}
+              </span>
+            </div>
+            <div className="item-info__content">
+              <span className="item-info__content-key">Quantity</span>
+              <span className="item-info__content-value">
+                {this.info.quantity}
+              </span>
+            </div>
+            <div className="item-info__categories">
+              <span className="item-info__categories-key">Categories</span>
+              <span className="item-info__categories-value">
+                {this.info.categories}
+              </span>
+            </div>
+          </div>
         </section>
-        <button>Edit</button>
+        <button className="edit-product">Edit</button>
       </>
     );
   }
