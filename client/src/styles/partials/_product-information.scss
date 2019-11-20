@@ -90,3 +90,52 @@
   @include mobile-subheader;
   text-transform: uppercase;
 }
+
+@include medium {
+  .header {
+    width: calc(100vw - 48px);
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid $mercury;
+    padding-bottom: 40px;
+
+    &-container {
+      align-items: center;
+
+      &__image {
+        margin-bottom: 6px;
+      }
+      &__title {
+        @include header;
+      }
+    }
+
+    &__stock-status {
+      margin: 0 0 0 24px;
+    }
+  }
+
+  .item {
+    width: calc(100vw - 48px);
+    &-info {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      border-bottom: 2px solid $mercury;
+
+      &__content {
+        width: 50%;
+      }
+      &__categories {
+        width: 100%;
+        padding-bottom: 40px;
+      }
+    }
+  }
+
+  .edit-product {
+    width: 160px;
+    float: right;
+    margin-right: 24px;
+  }
+}
