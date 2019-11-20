@@ -6,6 +6,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/products", require("./routes/api/products"));
+app.use("/locations", require("./routes/api/locations"));
 
 app.listen(PORT, (req, res) => {
   console.log(`Server is listening on PORT ${PORT}`);

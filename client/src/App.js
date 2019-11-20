@@ -90,6 +90,7 @@ export default class App extends React.Component {
   };
 
   render() {
+    console.log(locationsInfo);
     // console.log(locationsInfo);
     return (
       <div className="App">
@@ -104,10 +105,18 @@ export default class App extends React.Component {
               }}
             ></Route>
           </Switch>
+        </BrowserRouter>
+        <Inventory />
         </BrowserRouter> */}
+<<<<<<< HEAD
         <ProductInformation />
         <CreateNew locations={this.state.locationsInfo} /> 
         {/* <Inventory /> */}
+=======
+        {/* <ProductInformation /> */}
+        {/* <CreateNew locations={this.state.locationsInfo} /> */}
+        <Inventory />
+>>>>>>> master
       </div>
     );
   }
