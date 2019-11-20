@@ -1,7 +1,8 @@
 [
   {
-    "warehouse1": "Warehouse Number 1",
-    "warehouse2": "469 King St W, Toronto, ON",
+    "warehouseId": 1234,
+    "warehouseName": "Cool Warehouse",
+    "warehouseAddress": "469 King St W, Toronto, ON",
     "country": "Canada",
     "city": "Toronto",
     "contact": "Mara Weinberg Warehouse Manager",
@@ -9,59 +10,19 @@
     "categories": " Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation"
   },
   {
-    "warehouse1": "Warehouse Number 1",
-    "warehouse2": "469 King St W, Toronto, ON",
-    "contact": "Mara Weinberg Warehouse Manager",
-    "contactinfo": "+1 416 678 2345 weinberg@instack.com",
-    "categories": " Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation"
+    "warehouseId": 7890,
+    "warehouseName": "West Coast Warehouse",
+    "warehouseAddress": "455 Granville, Vancouver, B.C.",
+    "contact": "Noor",
+    "contactinfo": "+1 778 567 2145 noor@instack.com",
+    "categories": "Good Food"
   },
   {
-    "warehouse1": "Warehouse Number 1",
-    "warehouse2": "469 King St W, Toronto, ON",
-    "contact": "Mara Weinberg Warehouse Manager",
-    "contactinfo": "+1 416 678 2345 weinberg@instack.com",
-    "categories": " Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation"
-  },
-  {
-    "warehouse1": "Warehouse Number 1",
-    "warehouse2": "469 King St W, Toronto, ON",
-    "contact": "Mara Weinberg Warehouse Manager",
-    "contactinfo": "+1 416 678 2345 weinberg@instack.com",
-    "categories": " Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation"
-  },
-  {
-    "warehouse1": "Warehouse Number 1",
-    "warehouse2": "469 King St W, Toronto, ON",
-    "contact": "Mara Weinberg Warehouse Manager",
-    "contactinfo": "+1 416 678 2345 weinberg@instack.com",
-    "categories": " Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation"
-  },
-  {
-    "warehouse1": "Warehouse Number 1",
-    "warehouse2": "469 King St W, Toronto, ON",
-    "contact": "Mara Weinberg Warehouse Manager",
-    "contactinfo": "+1 416 678 2345 weinberg@instack.com",
-    "categories": " Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation"
-  },
-  {
-    "warehouse1": "Warehouse Number 1",
-    "warehouse2": "469 King St W, Toronto, ON",
-    "contact": "Mara Weinberg Warehouse Manager",
-    "contactinfo": "+1 416 678 2345 weinberg@instack.com",
-    "categories": " Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation"
-  },
-  {
-    "warehouse1": "Warehouse Number 1",
-    "warehouse2": "469 King St W, Toronto, ON",
-    "contact": "Mara Weinberg Warehouse Manager",
-    "contactinfo": "+1 416 678 2345 weinberg@instack.com",
-    "categories": " Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation"
-  },
-  {
-    "warehouse1": "Warehouse Number 1",
-    "warehouse2": "469 King St W, Toronto, ON",
-    "contact": "Mara Weinberg Warehouse Manager",
-    "contactinfo": "+1 416 678 2345 weinberg@instack.com",
-    "categories": " Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation"
+    "warehouseId": 90210,
+    "warehouseName": "Cold Warehouse",
+    "warehouseAddress": "123 Winter St., Calgary, Alberta",
+    "contact": "Kevin",
+    "contactinfo": "+1 778 321 2135 noor@instack.com",
+    "categories": "Cheap Gas"
   }
 ]
