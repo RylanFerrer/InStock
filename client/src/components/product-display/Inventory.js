@@ -84,7 +84,7 @@ export default class Inventory extends Component {
             <span className="inventory-keys__content">Quantity</span>
             <span className="inventory-keys__content">Status</span>
           </div>
-          <ProductTable items={this.array} products={this.state} />
+          <ProductTable products={this.state} />
         </>
       );
     } else {
