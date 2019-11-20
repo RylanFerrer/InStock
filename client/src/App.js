@@ -93,7 +93,7 @@ export default class App extends React.Component {
     console.log(locationsInfo)
     return (
       <div className="App">
-        {/* <BrowserRouter>
+        <BrowserRouter>
           <Navbar />
         
           <Switch>
@@ -104,8 +104,12 @@ export default class App extends React.Component {
               }}
             ></Route>
           </Switch>
+<<<<<<< HEAD
+        </BrowserRouter>
+=======
         </BrowserRouter> 
         <CreateNew locations = {this.state.locationsInfo} />*/}
+>>>>>>> master
         <Inventory />
       
       </div>
