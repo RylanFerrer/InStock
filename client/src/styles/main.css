@@ -581,4 +581,136 @@ body {
     margin-right: 13.5vw;
   }
 }
+
+.header {
+  width: calc(100vw - 32px);
+  margin: 0 auto;
+  margin-top: 32px;
+  margin-bottom: 40px;
+}
+
+.header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-container__image {
+  height: 24px;
+  margin-right: 16px;
+}
+
+.header__stock-status {
+  margin-top: 16px;
+  width: 88px;
+  height: 24px;
+  background-color: green;
+  color: #fafafa;
+  font-size: 14px;
+  line-height: 22px;
+  font-family: "avenir-demi-bold";
+  text-align: center;
+  padding-top: 2px;
+  border-radius: 4px;
+}
+
+.item {
+  width: calc(100vw - 32px);
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.item-description {
+  margin-bottom: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.item-description__heading {
+  margin-bottom: 16px;
+  font-size: 12px;
+  line-height: 20px;
+  font-family: "avenir-demi-bold";
+  text-transform: uppercase;
+  color: #afafaf;
+}
+
+.item-description__content {
+  font-size: 14px;
+  line-height: 22px;
+  font-family: "avenir";
+}
+
+.item-info__content {
+  margin-bottom: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.item-info__content-key {
+  margin-bottom: 16px;
+  font-size: 12px;
+  line-height: 20px;
+  font-family: "avenir-demi-bold";
+  text-transform: uppercase;
+  color: #afafaf;
+}
+
+.item-info__content-value {
+  font-size: 14px;
+  line-height: 22px;
+  font-family: "avenir";
+}
+
+.item-info__categories {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.item-info__categories-key {
+  margin-bottom: 16px;
+  font-size: 12px;
+  line-height: 20px;
+  font-family: "avenir-demi-bold";
+  text-transform: uppercase;
+  color: #afafaf;
+}
+
+.item-info__categories-value {
+  font-size: 14px;
+  line-height: 22px;
+  font-family: "avenir";
+}
+
+.edit-product {
+  width: calc(100vw - 32px);
+  margin-left: 16px;
+  height: 48px;
+  border: none;
+  border-radius: 4px;
+  color: #fafafa;
+  background-color: #002F5F;
+  font-size: 14px;
+  line-height: 22px;
+  font-family: "avenir-demi-bold";
+  text-transform: uppercase;
+}
 /*# sourceMappingURL=main.css.map */
