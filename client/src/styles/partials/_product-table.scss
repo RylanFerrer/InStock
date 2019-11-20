@@ -13,6 +13,7 @@
 
   &-row {
     border-bottom: 1px solid $mercury;
+    position: relative;
     margin-top: 32px;
     display: flex;
     flex-direction: column;
@@ -32,6 +33,20 @@
       }
       &--value {
         @include mobile-paragraph-lists;
+      }
+    }
+
+    &__remove {
+      position: absolute;
+      right: 0;
+      height: 72px;
+      width: 161px;
+      display: flex;
+      flex-direction: row-reverse;
+
+      &-button {
+        height: 24px;
+        margin-right: 8px;
       }
     }
   }
@@ -60,6 +75,7 @@
     //display as they appear on the screen. Group decision??
     &-row {
       margin-top: unset;
+      position: relative;
       padding: 24px 0;
       height: 100px;
       flex-direction: row;
@@ -84,11 +100,21 @@
         &--bold {
           @include subheader;
         }
+
+        //Setting a larger width for this single flex item in the row
+        // :first-child {
+        //   width: 224px;
+        // }
+      }
+      &__content:first-child {
+        width: 224px;
       }
 
-      //Setting a larger width for this single flex item in the row
-      :first-child {
-        width: 224px;
+      &__remove {
+        top: 36px;
+        &-button {
+          height: 24px;
+        }
       }
     }
   }
