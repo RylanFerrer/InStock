@@ -84,18 +84,17 @@ const locationsInfo = [
   }
 ];
 export default class App extends React.Component {
-
   state = {
     locationsInfo: locationsInfo
   };
 
   render() {
-    console.log(locationsInfo)
+    console.log(locationsInfo);
     return (
       <div className="App">
         <BrowserRouter>
           <Navbar />
-        
+
           <Switch>
             <Route
               path="/locations"
@@ -104,14 +103,8 @@ export default class App extends React.Component {
               }}
             ></Route>
           </Switch>
-<<<<<<< HEAD
         </BrowserRouter>
-=======
-        </BrowserRouter> 
-        <CreateNew locations = {this.state.locationsInfo} />*/}
->>>>>>> master
         <Inventory />
-      
       </div>
     );
   }
