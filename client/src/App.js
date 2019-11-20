@@ -12,6 +12,8 @@ const locationsInfo = [
   {
     warehouse1: "Warehouse Number 1",
     warehouse2: "469 King St W, Toronto, ON",
+    country: "Canada",
+    city: "Toronto",
     contact: "Mara Weinberg Warehouse Manager",
     contactinfo: "+1 416 678 2345 weinberg@instack.com",
     categories:
@@ -83,16 +85,18 @@ const locationsInfo = [
   }
 ];
 export default class App extends React.Component {
+
   state = {
     locationsInfo: locationsInfo
   };
 
   render() {
+    console.log(locationsInfo)
     return (
       <div className="App">
         {/* <BrowserRouter>
           <Navbar />
-          <CreateNew />
+        
           <Switch>
             <Route
               path="/locations"
@@ -101,9 +105,16 @@ export default class App extends React.Component {
               }}
             ></Route>
           </Switch>
+<<<<<<< HEAD
         </BrowserRouter> */}
         {/* <Inventory /> */}
         <ProductInformation />
+=======
+        </BrowserRouter> 
+        <CreateNew locations = {this.state.locationsInfo} />*/}
+        <Inventory />
+      
+>>>>>>> master
       </div>
     );
   }
