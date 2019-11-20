@@ -4,14 +4,16 @@ import Arrow from "../assets/Icons/SVG/Icon-back-arrow.svg";
 export default class ProductInformation extends Component {
   info = {
     item: "Product Name",
-    description: "description of item",
+    description:
+      "description of item. description of item. description of item. description of item. description of item. description of item. description of item",
     ordered_by: "John Doe",
     last_ordered: "5/24/2018",
     quantity: "1200",
     reference_number: "123456789",
     location: "Toronto, ON",
     status: "In Stock",
-    categories: "Industrial, automotive",
+    categories:
+      "Industrial, automotive, Industrial, automotive, Industrial, automotive, Industrial, automotive",
     key: 123456
   };
   render() {
