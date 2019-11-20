@@ -101,6 +101,12 @@ class App extends React.Component {
           </Switch>
         </BrowserRouter>
         <Inventory />
+<<<<<<< HEAD
+=======
+        {/* //   {/* <ProductInformation /> */}
+        // {/* <CreateNew locations={this.state.locationsInfo} /> */}
+        // <Inventory />
+>>>>>>> 74f3ef9dd7b509f4a54efd2a8169764b49de4786
       </>
     );
   }
