@@ -31,5 +31,16 @@
     "location": "Toronto, ON",
     "status": "In Stock",
     "key": 563920
+  },
+  {
+    "item": "Cheetos",
+    "description": "Cheesy and orange, like president orange",
+    "ordered_by": "Tronald Dump",
+    "last_ordered": "5/24/2018",
+    "quantity": "70000",
+    "reference_number": "123456789",
+    "location": "Washington DC",
+    "status": "In Stock",
+    "key": 563920
   }
 ]

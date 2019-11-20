@@ -1,9 +1,10 @@
 import React from "react";
 
 export default function ProductTable(props) {
-  const products = props.items;
-  console.log(products);
-  const tableDisplay = products.map(obj => {
+  //cleaning the props we receive so that we can deal with just an array.
+  const stateProducts = props.products.products[0];
+  //Map out the table based on the props that we are receiving and cleaning into an array
+  const tableDisplay = stateProducts.map(obj => {
     return (
       <section key={obj.key} className="table">
         <div className="table-row">
@@ -34,6 +35,6 @@ export default function ProductTable(props) {
       </section>
     );
   });
-
+  // Returning table
   return <>{tableDisplay}</>;
 }
