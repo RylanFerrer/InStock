@@ -117,11 +117,12 @@
 
   .item {
     width: calc(100vw - 48px);
+
+    border-bottom: 2px solid $mercury;
     &-info {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      border-bottom: 2px solid $mercury;
 
       &__content {
         width: 50%;
@@ -137,5 +138,28 @@
     width: 160px;
     float: right;
     margin-right: 24px;
+  }
+}
+
+@include large {
+  .header {
+    width: calc(100vw - 360px);
+  }
+
+  .item {
+    width: calc(100vw - 360px);
+    display: flex;
+    &-description {
+      width: 50%;
+      padding-right: 24px;
+    }
+
+    &-info {
+      width: 50%;
+    }
+  }
+
+  .edit-product {
+    margin-right: 180px;
   }
 }
