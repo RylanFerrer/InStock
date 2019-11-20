@@ -101,12 +101,9 @@ class App extends React.Component {
           </Switch>
         </BrowserRouter>
         <Inventory />
-        {/* //   {/* <ProductInformation /> */}
-        // {/* <CreateNew locations={this.state.locationsInfo} /> */}
-        // <Inventory />
       </>
     );
   }
 }
-// console.log(this.state.locationsInfo);
+
 export default App;

@@ -42,6 +42,7 @@ body {
 
 .table-row {
   border-bottom: 1px solid #e1e1e1;
+  position: relative;
   margin-top: 32px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -85,6 +86,25 @@ body {
   font-family: "avenir";
 }
 
+.table-row__remove {
+  position: absolute;
+  right: 0;
+  height: 72px;
+  width: 161px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.table-row__remove-button {
+  height: 24px;
+  margin-right: 8px;
+}
+
 @media only screen and (min-width: 768px) {
   .inventory-keys {
     width: calc(100vw - 48px);
@@ -112,6 +132,7 @@ body {
   }
   .table-row {
     margin-top: unset;
+    position: relative;
     padding: 24px 0;
     height: 100px;
     -webkit-box-orient: horizontal;
@@ -147,8 +168,14 @@ body {
     line-height: 24px;
     font-family: "avenir-demi-bold";
   }
-  .table-row :first-child {
+  .table-row__content:first-child {
     width: 224px;
+  }
+  .table-row__remove {
+    top: 36px;
+  }
+  .table-row__remove-button {
+    height: 24px;
   }
 }
 
