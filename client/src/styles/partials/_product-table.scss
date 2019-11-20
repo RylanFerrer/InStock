@@ -42,7 +42,7 @@
     width: calc(100vw - 48px);
     margin: $center;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     &__content {
       width: 100px;
       @include labels;
@@ -63,7 +63,7 @@
       padding: 24px 0;
       height: 100px;
       flex-direction: row;
-      justify-content: space-evenly;
+      justify-content: space-between;
 
       &__content {
         align-items: space-between;
