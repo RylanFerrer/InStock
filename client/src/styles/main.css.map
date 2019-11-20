@@ -8,7 +8,8 @@
         "partials/_russellfonts.scss",
         "partials/_product-table.scss",
         "partials/_create-new-form.scss",
-        "partials/_inventory.scss"
+        "partials/_inventory.scss",
+        "partials/_locations.scss"
     ],
     "names": [],
     "file": "main.css"
