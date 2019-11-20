@@ -4,7 +4,8 @@ const productsJSON = "../../models/products.json";
 const products = require(productsJSON);
 
 router.get("/", (req, res) => {
-  res.JSON(products);
+  console.log(products);
+  res.status(200).json(products);
 });
 
 module.exports = router;

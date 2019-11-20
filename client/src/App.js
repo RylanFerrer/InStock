@@ -80,7 +80,7 @@ export default class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <BrowserRouter>
+        {/* <BrowserRouter>
           <Navbar />
           <CreateNew />
           <Switch>
@@ -91,7 +91,7 @@ export default class App extends React.Component {
               }}
             ></Route>
           </Switch>
-        </BrowserRouter>
+        </BrowserRouter> */}
         <Inventory />
       </div>
     );

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ProductTable from "./ProductTable";
 import SearchIcon from "../../assets/Icons/SVG/Icon-search.svg";
+import axios from "axios";
 
 export default class Inventory extends Component {
   array = [
@@ -38,6 +39,13 @@ export default class Inventory extends Component {
       key: 563920
     }
   ];
+
+  componentDidMount() {
+    axios.get("http://localhost:5000/products").then(res => {
+      console.log(res.data);
+    });
+  }
+
   render() {
     return (
       <>
