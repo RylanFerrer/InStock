@@ -1,4 +1,5 @@
 import React from "react";
+import kebab from "../../assets/Icons/SVG/Icon-kebab-default.svg";
 
 export default function ProductTable(props) {
   //cleaning the props we receive so that we can deal with just an array.
@@ -30,6 +31,9 @@ export default function ProductTable(props) {
           <div className="table-row__content">
             <span className="table-row__content--key">Status</span>
             <span className="table-row__content--value">{obj.status}</span>
+          </div>
+          <div className="table-row__remove">
+            <img className="table-row__remove-button" src={kebab} />
           </div>
         </div>
       </section>
