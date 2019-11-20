@@ -108,9 +108,9 @@ export default class App extends React.Component {
         </BrowserRouter>
         <Inventory />
         </BrowserRouter> */}
-        <ProductInformation />
+        {/* <ProductInformation /> */}
         {/* <CreateNew locations={this.state.locationsInfo} /> */}
-        {/* <Inventory /> */}
+        <Inventory />
       </div>
     );
   }
