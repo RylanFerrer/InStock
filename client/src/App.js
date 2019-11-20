@@ -89,8 +89,8 @@ class App extends React.Component {
     return (
       <>
         <BrowserRouter>
-          <Navbar />
-
+          {/* <Navbar />
+        
           <Switch>
             <Route
               path="/locations"
@@ -98,12 +98,12 @@ class App extends React.Component {
                 return <Locations />;
               }}
             ></Route>
-          </Switch>
+          </Switch> */}
         </BrowserRouter>
         <Inventory />
         {/* //   {/* <ProductInformation /> */}
-        // {/* <CreateNew locations={this.state.locationsInfo} /> */}
-        // <Inventory />
+        {/* <CreateNew locations={this.state.locationsInfo} /> */}
+        {/* <Inventory /> */}
       </>
     );
   }
