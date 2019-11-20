@@ -9,63 +9,72 @@ import Inventory from "./components/product-display/Inventory";
 
 const locationsInfo = [
   {
-    warehouse: "Warehouse Number 1 469 King St W, Toronto, ON",
+    warehouse1: "Warehouse Number 1",
+    warehouse2: "469 King St W, Toronto, ON",
     contact: "Mara Weinberg Warehouse Manager",
     contactinfo: "+1 416 678 2345 weinberg@instack.com",
     categories:
       " Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation"
   },
   {
-    warehouse: "Warehouse Number 1 469 King St W, Toronto, ON",
+    warehouse1: "Warehouse Number 1",
+    warehouse2: "469 King St W, Toronto, ON",
     contact: "Mara Weinberg Warehouse Manager",
     contactinfo: "+1 416 678 2345 weinberg@instack.com",
     categories:
       " Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation"
   },
   {
-    warehouse: "Warehouse Number 1 469 King St W, Toronto, ON",
+    warehouse1: "Warehouse Number 1",
+    warehouse2: "469 King St W, Toronto, ON",
     contact: "Mara Weinberg Warehouse Manager",
     contactinfo: "+1 416 678 2345 weinberg@instack.com",
     categories:
       " Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation"
   },
   {
-    warehouse: "Warehouse Number 1 469 King St W, Toronto, ON",
+    warehouse1: "Warehouse Number 1",
+    warehouse2: "469 King St W, Toronto, ON",
     contact: "Mara Weinberg Warehouse Manager",
     contactinfo: "+1 416 678 2345 weinberg@instack.com",
     categories:
       " Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation"
   },
   {
-    warehouse: "Warehouse Number 1 469 King St W, Toronto, ON",
+    warehouse1: "Warehouse Number 1",
+    warehouse2: "469 King St W, Toronto, ON",
     contact: "Mara Weinberg Warehouse Manager",
     contactinfo: "+1 416 678 2345 weinberg@instack.com",
     categories:
       " Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation"
   },
   {
-    warehouse: "Warehouse Number 1 469 King St W, Toronto, ON",
+    warehouse1: "Warehouse Number 1",
+    warehouse2: "469 King St W, Toronto, ON",
     contact: "Mara Weinberg Warehouse Manager",
     contactinfo: "+1 416 678 2345 weinberg@instack.com",
     categories:
       " Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation"
   },
   {
-    warehouse: "Warehouse Number 1 469 King St W, Toronto, ON",
+    warehouse1: "Warehouse Number 1",
+    warehouse2: "469 King St W, Toronto, ON",
     contact: "Mara Weinberg Warehouse Manager",
     contactinfo: "+1 416 678 2345 weinberg@instack.com",
     categories:
       " Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation"
   },
   {
-    warehouse: "Warehouse Number 1 469 King St W, Toronto, ON",
+    warehouse1: "Warehouse Number 1",
+    warehouse2: "469 King St W, Toronto, ON",
     contact: "Mara Weinberg Warehouse Manager",
     contactinfo: "+1 416 678 2345 weinberg@instack.com",
     categories:
       " Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation"
   },
   {
-    warehouse: "Warehouse Number 1 469 King St W, Toronto, ON",
+    warehouse1: "Warehouse Number 1",
+    warehouse2: "469 King St W, Toronto, ON",
     contact: "Mara Weinberg Warehouse Manager",
     contactinfo: "+1 416 678 2345 weinberg@instack.com",
     categories:
