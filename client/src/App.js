@@ -106,7 +106,7 @@ export default class App extends React.Component {
           </Switch>
         </BrowserRouter> */}
         <ProductInformation />
-        {/* <CreateNew locations={this.state.locationsInfo} /> */}
+        <CreateNew locations={this.state.locationsInfo} /> 
         {/* <Inventory /> */}
       </div>
     );
