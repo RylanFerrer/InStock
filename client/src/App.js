@@ -7,6 +7,7 @@ import { Route, Switch } from "react-router-dom";
 import "./styles/main.css";
 import Inventory from "./components/product-display/Inventory";
 import ProductInformation from "./components/ProductInformation";
+import WarehouseInformation from "./components/WarehouseInformation";
 
 // const locationsInfo = [
 //   {
@@ -88,10 +89,10 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <BrowserRouter>
-          {/* <Navbar />
-        
-          <Switch>
+        {/* <BrowserRouter> */}
+        {/* <Navbar /> */}
+        <WarehouseInformation />
+        {/* <Switch>
             <Route
               path="/locations"
               render={() => {
@@ -106,8 +107,7 @@ class App extends React.Component {
             ></Route>
             <Route path="/" exact component={Inventory} />
           </Switch>
-        </BrowserRouter>
-
+        </BrowserRouter> */}
       </>
     );
   }

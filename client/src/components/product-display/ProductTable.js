@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 
 import RemoveButton from "./Remove-button";
 
-
 export default function ProductTable(props) {
   //cleaning the props we receive so that we can deal with just an array.
+  console.log(props.products);
   const stateProducts = props.products[0];
   //Map out the table based on the props that we are receiving and cleaning into an array
   const tableDisplay = stateProducts.map(obj => {
