@@ -98,10 +98,16 @@ class App extends React.Component {
                 return <Locations />;
               }}
             ></Route>
-          </Switch> */}
+            <Route
+              path="/:id"
+              render={props => {
+                return <ProductInformation warehouseID={props.match.url} />;
+              }}
+            ></Route>
+            <Route path="/" exact component={Inventory} />
+          </Switch>
         </BrowserRouter>
-        <CreateNew />
-        <Inventory />
+
       </>
     );
   }
