@@ -1,6 +1,10 @@
 import React from "react";
+
 import kebab from "../../assets/Icons/SVG/Icon-kebab-default.svg";
 import { Link } from "react-router-dom";
+
+import RemoveButton from "./Remove-button";
+
 
 export default function ProductTable(props) {
   //cleaning the props we receive so that we can deal with just an array.
