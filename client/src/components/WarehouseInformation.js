@@ -113,7 +113,16 @@ export default class WarehouseInformation extends Component {
             </div>
           </div>
         </section>
-        <ProductTable products={fakeProducts} />
+        <section className="warehouse-products">
+          <div className="inventory-keys">
+            <span className="inventory-keys__content">Item</span>
+            <span className="inventory-keys__content">Last Ordered</span>
+            <span className="inventory-keys__content">Location</span>
+            <span className="inventory-keys__content">Quantity</span>
+            <span className="inventory-keys__content">Status</span>
+          </div>
+          <ProductTable products={fakeProducts} />
+        </section>
       </>
     );
   }
