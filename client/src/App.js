@@ -7,6 +7,7 @@ import { Route, Switch } from "react-router-dom";
 import "./styles/main.css";
 import Inventory from "./components/product-display/Inventory";
 import ProductInformation from "./components/ProductInformation";
+import WarehouseInformation from "./components/WarehouseInformation";
 
 // const locationsInfo = [
 //   {
@@ -90,7 +91,6 @@ class App extends React.Component {
       <>
         <BrowserRouter>
           <Navbar />
-
           <Switch>
             <Route
               path="/locations"

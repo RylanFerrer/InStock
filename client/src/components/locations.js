@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import arrowRight from "../assets/Icons/SVG/Icon-arrow-right.svg";
 
 export default class Locations extends React.Component {
   state = {
@@ -28,6 +29,9 @@ export default class Locations extends React.Component {
                 <div className="contact-object">{obj.contact}</div>
                 <div className="contact-info__object">{obj.contactinfo}</div>
                 <div className="category-object">{obj.categories}</div>
+              </div>
+              <div className="location-row__remove">
+                <img className="location-row__remove-button" src={arrowRight} />
               </div>
             </div>
           </>
