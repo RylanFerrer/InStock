@@ -342,9 +342,11 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: fixed;
 }
 
 .modal {
+  position: fixed;
   font-family: avenir;
   width: 100%;
   height: 100%;
@@ -461,7 +463,7 @@ a {
   position: fixed;
   bottom: 40px;
   right: 32px;
-  z-index: 2;
+  z-index: 0;
 }
 
 @media only screen and (min-width: 768px) {
@@ -1033,6 +1035,61 @@ a {
   }
   .edit-product {
     margin-right: 180px;
+  }
+}
+
+.warehouse-info {
+  width: calc(100vw - 32px);
+  margin: 0 auto;
+}
+
+.warehouse-info__content {
+  margin-bottom: 24px;
+}
+
+.warehouse-info__content-key {
+  font-size: 12px;
+  line-height: 20px;
+  font-family: "avenir-demi-bold";
+  text-transform: uppercase;
+  color: #afafaf;
+}
+
+.warehouse-info__content-container {
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 22px;
+  font-family: "avenir";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media only screen and (min-width: 768px) {
+  .warehouse-info {
+    width: calc(100vw - 48px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 40px;
+  }
+  .warehouse-info__content {
+    width: 50%;
+    margin-bottom: unset;
+  }
+  .warehouse-products {
+    background-color: #fafafa;
+    padding: 40px 0;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .warehouse-info {
+    width: calc(100vw - 360px);
   }
 }
 /*# sourceMappingURL=main.css.map */

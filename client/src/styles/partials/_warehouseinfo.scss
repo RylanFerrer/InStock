@@ -1,0 +1,43 @@
+.warehouse-info {
+  width: calc(100vw - 32px);
+  margin: $center;
+
+  &__content {
+    margin-bottom: 24px;
+
+    &-key {
+      @include labels;
+    }
+
+    &-container {
+      margin-top: 16px;
+      @include paragraphs;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+@include medium {
+  .warehouse-info {
+    width: calc(100vw - 48px);
+    display: flex;
+    margin-bottom: 40px;
+
+    &__content {
+      width: 50%;
+      margin-bottom: unset;
+    }
+  }
+
+  .warehouse-products {
+    background-color: $alabaster;
+    padding: 40px 0;
+  }
+}
+
+@include large {
+  .warehouse-info {
+    width: calc(100vw - 360px);
+  }
+}

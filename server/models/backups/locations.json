@@ -13,21 +13,6 @@
     "categories": " Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation"
   },
   {
-<<<<<<< HEAD
-    "warehouseId": 7890,
-    "warehouseName": "West Coast Warehouse",
-    "warehouseAddress": "455 Granville, Vancouver, BC",
-    "contact": "Noor",
-    "contactinfo": "+1 416 678 2345 weinberg@instack.com",
-    "categories": "Good Food"
-  },
-  {
-    "warehouseId": 90210,
-    "warehouseName": "Cold Warehouse",
-    "warehouseAddress": "123 Winter St., Calgary, AB",
-    "contact": "Kevin",
-    "contactinfo": "+1 416 678 2345 weinberg@instack.com",
-=======
     "id": "12d40",
     "name": "Noor's Cheetos ",
     "street": "455 Granville",
@@ -51,7 +36,6 @@
     "role": "Guy",
     "contactinfo": "+1 778 321 2135",
     "email": "kevin@instack.com",
->>>>>>> 806f0a0543feced9880c467375c95b2984515b87
     "categories": "Cheap Gas"
   }
 ]

@@ -5,7 +5,7 @@ import axios from "axios";
 import addIcon from "../assets/Icons/SVG/Icon-add.svg";
 export default class CreateNew extends React.Component {
   state = {
-    warehouses: this.props.locations,
+    warehouses: this.props.locations[0],
     warehouseId: undefined,
     checked: false,
     active: "none",
@@ -16,7 +16,6 @@ export default class CreateNew extends React.Component {
     this.setState({ checked: checked });
   };
   toggleClass = () => {
-    console.log("Got clicked");
     this.setState({ active: "flex" });
   };
   cancel = () => {
@@ -27,15 +26,15 @@ export default class CreateNew extends React.Component {
     const label = optionSelected.label;
     let warehouse =
       this.state.warehouses &&
-      this.state.warehouses.map(loc => {
-        if (loc.warehouse1 === label) {
-          return { Country: loc.country, City: loc.city };
+      this.state.warehouses.filter(loc => {
+        if (loc.name === label) {
+          return true
         }
-        return null;
+        return false
       });
     this.setState({
-      country: warehouse[0].Country,
-      city: warehouse[0].City,
+      country: warehouse[0].country,
+      city: warehouse[0].city,
       warehouseId: value
     });
   };
@@ -55,19 +54,21 @@ export default class CreateNew extends React.Component {
         warehouseId: this.state.warehouseId,
         product: this.product.value,
         date: this.date.value,
-        stock: this.state.checked,
+        stock: this.state.checked === false ? "Out Of Stock": "In Stock",
         quantity: this.quantity.value,
         description: this.description.value
-      });
+      }).then(res => {
+        this.props.table()
+      })
     } else {
-      console.log("Please fill out all fields");
+      alert("Please fill out all fields");
     }
   };
   render() {
     const options =
       this.state.warehouses &&
       this.state.warehouses.map(loc => {
-        return { value: 123, label: loc.warehouse1 };
+        return { value: loc.id, label: loc.name };
       });
 
     return (
@@ -75,8 +76,7 @@ export default class CreateNew extends React.Component {
         <div onClick={this.toggleClass} className="add-post">
           <img className="add-post__icon" src={addIcon} />
         </div>
-        ` <button onClick={this.toggleClass}>Click Me</button>
-        <div className="modal" style={{ display: `${this.state.active}` }}>
+        <div className="modal" style={{ display: `${this.state.active}`, position: "fixed" }}>
           <div className="modal__content">
             <h2 className="modal__content-header">Create New</h2>
             <div className="modal__content-container">
