@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Arrow from "../assets/Icons/SVG/Icon-back-arrow.svg";
 import Axios from "axios";
+import { Link } from "react-router-dom";
 
 export default class ProductInformation extends Component {
   state = {
@@ -38,7 +39,9 @@ export default class ProductInformation extends Component {
         <>
           <header className="header">
             <div className="header-container">
-              <img className="header-container__image" src={Arrow} />
+              <Link to="/">
+                <img className="header-container__image" src={Arrow} />
+              </Link>
               {/* <h1 className="header-container__title">Product Name</h1> */}
               <h1 className="header-container__title">{itemInfo.item}</h1>
             </div>

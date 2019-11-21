@@ -44,6 +44,32 @@
   border: 1px solid #e1e1e1;
   border-radius: 4px;
 }
+.location {
+  width: calc(100vw - 32px);
+  margin: $center;
+
+  &-row {
+    border-bottom: 1px solid $mercury;
+    position: relative;
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+
+    &__remove {
+      position: absolute;
+      right: 0;
+      height: 72px;
+      width: 161px;
+      display: flex;
+      flex-direction: row-reverse;
+
+      &-button {
+        height: 24px;
+        margin-right: 8px;
+      }
+    }
+  }
+}
 
 @include medium {
   .locations-div {
@@ -69,6 +95,9 @@
   .locations-container {
     margin-left: 24px;
     width: calc(100vw - 48px);
+  }
+  .location-row__remove {
+    margin-right: 0vw;
   }
 }
 
@@ -116,4 +145,7 @@
   //   .locations-keys__warehouse {
   //     padding-right: 30vw;
   //   }
+  .location-row__remove {
+    margin-right: 12vw;
+  }
 }
