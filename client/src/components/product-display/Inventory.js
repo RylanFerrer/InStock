@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ProductTable from "./ProductTable";
 import SearchIcon from "../../assets/Icons/SVG/Icon-search.svg";
 import axios from "axios";
+import CreateNew from "../CreateNew";
 
 export default class Inventory extends Component {
   //setting initial state so that it can be used in conditional rendering.
@@ -85,6 +86,7 @@ export default class Inventory extends Component {
             <span className="inventory-keys__content">Status</span>
           </div>
           <ProductTable products={this.state.products} />
+          <CreateNew />
         </>
       );
     } else {

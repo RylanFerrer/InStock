@@ -1,0 +1,19 @@
+.warehouse-info {
+  width: calc(100vw - 32px);
+  margin: $center;
+
+  &__content {
+    margin-bottom: 24px;
+
+    &-key {
+      @include labels;
+    }
+
+    &-container {
+      margin-top: 16px;
+      @include paragraphs;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

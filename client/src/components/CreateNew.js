@@ -75,7 +75,6 @@ export default class CreateNew extends React.Component {
         <div onClick={this.toggleClass} className="add-post">
           <img className="add-post__icon" src={addIcon} />
         </div>
-        ` <button onClick={this.toggleClass}>Click Me</button>
         <div className="modal" style={{ display: `${this.state.active}` }}>
           <div className="modal__content">
             <h2 className="modal__content-header">Create New</h2>
