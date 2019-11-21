@@ -13,8 +13,9 @@ export default function ProductTable(props) {
   const tableDisplay = stateProducts.map(obj => {
     return (
       <section key={obj.key} className="table">
-        <Link to={`/${obj.key}`}>
-          <div className="table-row">
+        {/* <Link to={`/${obj.key}`}> */}
+        <div className="table-row">
+          <Link to={`/${obj.key}`}>
             <div className="table-row__content">
               <span className="table-row__content--key">Item</span>
               <span className="table-row__content--bold">{obj.item}</span>
@@ -40,11 +41,13 @@ export default function ProductTable(props) {
               <span className="table-row__content--key">Status</span>
               <span className="table-row__content--value">{obj.status}</span>
             </div>
-            <div className="table-row__remove">
+            {/* <div className="table-row__remove">
               <img className="table-row__remove-button" src={kebab} />
-            </div>
-          </div>
-        </Link>
+            </div> */}
+          </Link>
+          <RemoveButton />
+        </div>
+        {/* </Link> */}
       </section>
     );
   });
