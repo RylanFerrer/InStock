@@ -5,7 +5,6 @@ const locations = require(fileName);
 
 //get locations data
 router.get("/", (req, res) => {
-  console.log(locations);
   res.json(locations);
 });
 
