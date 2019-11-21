@@ -62,12 +62,12 @@ export default class WarehouseInformation extends Component {
         }
       ]
     ];
+    console.log(this.props);
     return (
       <>
         <header className="header">
           <div className="header-container">
             <img className="header-container__image" src={Arrow} />
-            {/* <h1 className="header-container__title">Product Name</h1> */}
             <h1 className="header-container__title">
               {fakeWarehouse.warehouse}
             </h1>

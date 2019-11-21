@@ -94,10 +94,13 @@ class App extends React.Component {
           <Switch>
             <Route
               path="/locations"
-              render={() => {
-                return <Locations />;
-              }}
-            ></Route>
+              render={({ match: { url } }) => (
+                <>
+                  <Route exact path={`${url}/`} component={Locations} />
+                  <Route path={`${url}/:id`} component={WarehouseInformation} />
+                </>
+              )}
+            />
             <Route
               path="/:id"
               render={props => {
