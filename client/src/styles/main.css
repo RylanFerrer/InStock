@@ -900,4 +900,28 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+
+@media only screen and (min-width: 768px) {
+  .warehouse-info {
+    width: calc(100vw - 48px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 40px;
+  }
+  .warehouse-info__content {
+    width: 50%;
+    margin-bottom: unset;
+  }
+  .warehouse-products {
+    background-color: #fafafa;
+    padding: 40px 0;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .warehouse-info {
+    width: calc(100vw - 360px);
+  }
+}
 /*# sourceMappingURL=main.css.map */

@@ -17,3 +17,27 @@
     }
   }
 }
+
+@include medium {
+  .warehouse-info {
+    width: calc(100vw - 48px);
+    display: flex;
+    margin-bottom: 40px;
+
+    &__content {
+      width: 50%;
+      margin-bottom: unset;
+    }
+  }
+
+  .warehouse-products {
+    background-color: $alabaster;
+    padding: 40px 0;
+  }
+}
+
+@include large {
+  .warehouse-info {
+    width: calc(100vw - 360px);
+  }
+}
