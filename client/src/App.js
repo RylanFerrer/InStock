@@ -89,10 +89,9 @@ class App extends React.Component {
   render() {
     return (
       <>
-        {/* <BrowserRouter> */}
-        {/* <Navbar /> */}
-        <WarehouseInformation />
-        {/* <Switch>
+        <BrowserRouter>
+          <Navbar />
+          <Switch>
             <Route
               path="/locations"
               render={() => {
@@ -107,7 +106,7 @@ class App extends React.Component {
             ></Route>
             <Route path="/" exact component={Inventory} />
           </Switch>
-        </BrowserRouter> */}
+        </BrowserRouter>
       </>
     );
   }
