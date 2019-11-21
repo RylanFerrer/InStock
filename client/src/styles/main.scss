@@ -8,10 +8,15 @@ html,
 body {
   box-sizing: inherit;
 }
+a {
+  text-decoration: none;
+  color: unset;
+}
 
 @import "./partials/variables";
 @import "./partials/breakpoints";
 @import "./partials/russellfonts";
+@import "./partials/header";
 @import "./partials/product-table";
 @import "./partials/create-new-form";
 @import "./partials/inventory";

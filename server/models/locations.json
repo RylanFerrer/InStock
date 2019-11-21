@@ -12,17 +12,17 @@
   {
     "warehouseId": 7890,
     "warehouseName": "West Coast Warehouse",
-    "warehouseAddress": "455 Granville, Vancouver, B.C.",
+    "warehouseAddress": "455 Granville, Vancouver, BC",
     "contact": "Noor",
-    "contactinfo": "+1 778 567 2145 noor@instack.com",
+    "contactinfo": "+1 416 678 2345 weinberg@instack.com",
     "categories": "Good Food"
   },
   {
     "warehouseId": 90210,
     "warehouseName": "Cold Warehouse",
-    "warehouseAddress": "123 Winter St., Calgary, Alberta",
+    "warehouseAddress": "123 Winter St., Calgary, AB",
     "contact": "Kevin",
-    "contactinfo": "+1 778 321 2135 noor@instack.com",
+    "contactinfo": "+1 416 678 2345 weinberg@instack.com",
     "categories": "Cheap Gas"
   }
 ]

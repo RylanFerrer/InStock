@@ -89,8 +89,7 @@ class App extends React.Component {
     return (
       <>
         <BrowserRouter>
-          {/* <Navbar />
-        
+          <Navbar />
           <Switch>
             <Route
               path="/locations"
@@ -107,7 +106,6 @@ class App extends React.Component {
             <Route path="/" exact component={Inventory} />
           </Switch>
         </BrowserRouter>
-
       </>
     );
   }
