@@ -7,6 +7,7 @@ import CreateNew from "../CreateNew";
 export default class Inventory extends Component {
   //setting initial state so that it can be used in conditional rendering.
   state = {
+    locations: [],
     products: []
   };
 
@@ -50,6 +51,12 @@ export default class Inventory extends Component {
   //Using this part of the lifecycle to retreive product information and set state so that
   //rendering can occur
   componentDidMount() {
+    axios.get("http://localhost:5000/locations").then(res => {
+        this.setState({
+          locations: [res.data]
+        })
+    })
+
     axios.get("http://localhost:5000/products").then(res => {
       // console.log(res.data);
       this.setState({
@@ -86,7 +93,7 @@ export default class Inventory extends Component {
             <span className="inventory-keys__content">Status</span>
           </div>
           <ProductTable products={this.state.products} />
-          <CreateNew />
+          <CreateNew locations = {this.state.locations}/>
         </>
       );
     } else {
