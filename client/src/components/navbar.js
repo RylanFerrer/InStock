@@ -16,7 +16,7 @@ export default function Navbar() {
             Inventory
           </Link>
 
-          <Link className="nav-link" to="/Locations">
+          <Link className="nav-link" to="/locations">
             Locations
           </Link>
         </nav>

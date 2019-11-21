@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import arrowRight from "../assets/Icons/SVG/Icon-arrow-right.svg";
 import SearchIcon from "../assets/Icons/SVG/Icon-search.svg";
+import { Link } from "react-router-dom";
 
 export default class Locations extends React.Component {
   state = {
@@ -18,23 +19,30 @@ export default class Locations extends React.Component {
   render() {
     if (this.state.locationsInfo.length > 0) {
       console.log(this.state.locationsInfo);
-      let test = this.state.locationsInfo.map(obj => {
+      let warehouse = this.state.locationsInfo.map(obj => {
         return (
           <>
-            <div className="locations-content">
-              <div className="warehouse-container">
-                <div className="warehouse-object1">{obj.warehouseName}</div>
-                <div className="warehouse-object2">{obj.warehouseAddress}</div>
+            <Link to={`/locations/${obj.id}`}>
+              <div className="locations-content">
+                <div className="warehouse-container">
+                  <div className="warehouse-object1">{obj.warehouseName}</div>
+                  <div className="warehouse-object2">
+                    {obj.warehouseAddress}
+                  </div>
+                </div>
+                <div className="contact-container">
+                  <div className="contact-object">{obj.contact}</div>
+                  <div className="contact-info__object">{obj.contactinfo}</div>
+                  <div className="category-object">{obj.categories}</div>
+                </div>
+                <div className="location-row__remove">
+                  <img
+                    className="location-row__remove-button"
+                    src={arrowRight}
+                  />
+                </div>
               </div>
-              <div className="contact-container">
-                <div className="contact-object">{obj.contact}</div>
-                <div className="contact-info__object">{obj.contactinfo}</div>
-                <div className="category-object">{obj.categories}</div>
-              </div>
-              <div className="location-row__remove">
-                <img className="location-row__remove-button" src={arrowRight} />
-              </div>
-            </div>
+            </Link>
           </>
         );
       });
@@ -64,7 +72,7 @@ export default class Locations extends React.Component {
               </span>
               <span className="locations-keys__categories">CATEGORIES</span>
             </div>
-            {test}
+            {warehouse}
           </div>
         </section>
       );
