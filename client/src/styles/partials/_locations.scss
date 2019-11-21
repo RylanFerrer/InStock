@@ -43,6 +43,7 @@
   background-color: #fafafa;
   border: 1px solid #e1e1e1;
   border-radius: 4px;
+  border-left: none;
 }
 .location {
   width: calc(100vw - 32px);
@@ -97,7 +98,10 @@
     width: calc(100vw - 48px);
   }
   .location-row__remove {
-    margin-right: 0vw;
+    margin-right: 3vw;
+  }
+  .locations-title {
+    font-size: 36px;
   }
 }
 
@@ -147,5 +151,11 @@
   //   }
   .location-row__remove {
     margin-right: 12vw;
+  }
+  .locations-large {
+    margin-top: 3vh;
+  }
+  .locations-title {
+    font-size: 36px;
   }
 }

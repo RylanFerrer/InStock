@@ -7,21 +7,17 @@ export default function Navbar() {
     <header className="head">
       <div className="head-div">
         <div className="head-container">
-          <Link to="/">
+          <Link className="image-link" to="/">
             <img className="head__image" src={Logo} alt="Instock Logo" />
           </Link>
         </div>
         <nav className="nav-container">
-          <Link to="/">
-            <a className="head__nav" href="#">
-              Inventory
-            </a>
+          <Link className="nav-link" to="/">
+            Inventory
           </Link>
 
-          <Link to="/Locations">
-            <a className="head__nav" href="#">
-              Locations
-            </a>
+          <Link className="nav-link" to="/Locations">
+            Locations
           </Link>
         </nav>
       </div>
