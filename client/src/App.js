@@ -98,15 +98,15 @@ class App extends React.Component {
                 return <Locations />;
               }}
             ></Route>
+            <Route
+              path="/:id"
+              render={props => {
+                return <ProductInformation warehouseID={props.match.url} />;
+              }}
+            ></Route>
+            <Route path="/" exact component={Inventory} />
           </Switch>
         </BrowserRouter>
-        <Inventory />
-<<<<<<< HEAD
-=======
-        {/* //   {/* <ProductInformation /> */}
-        // {/* <CreateNew locations={this.state.locationsInfo} /> */}
-        // <Inventory />
->>>>>>> 74f3ef9dd7b509f4a54efd2a8169764b49de4786
       </>
     );
   }

@@ -21,8 +21,8 @@ export default class Locations extends React.Component {
           <>
             <div className="locations-content">
               <div className="warehouse-container">
-                <div className="warehouse-object1">{obj.warehouse1}</div>
-                <div className="warehouse-object2">{obj.warehouse2}</div>
+                <div className="warehouse-object1">{obj.warehouseName}</div>
+                <div className="warehouse-object2">{obj.warehouseAddress}</div>
               </div>
               <div className="contact-container">
                 <div className="contact-object">{obj.contact}</div>

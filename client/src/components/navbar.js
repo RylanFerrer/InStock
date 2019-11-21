@@ -6,12 +6,12 @@ export default function Navbar() {
   return (
     <header>
       <div className="header-logo">
-        <a href="index.html">
+        <Link to="/">
           <img className="header__image" src={Logo} alt="Instock Logo" />
-        </a>
+        </Link>
       </div>
       <nav className="nav-container">
-        <Link to="/Inventory">
+        <Link to="/">
           <a className="header__nav" href="#">
             Inventory
           </a>
