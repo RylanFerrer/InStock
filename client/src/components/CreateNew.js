@@ -57,7 +57,9 @@ export default class CreateNew extends React.Component {
         stock: this.state.checked === false ? "Out Of Stock": "In Stock",
         quantity: this.quantity.value,
         description: this.description.value
-      });
+      }).then(res => {
+        this.props.table()
+      })
     } else {
       alert("Please fill out all fields");
     }
@@ -74,7 +76,7 @@ export default class CreateNew extends React.Component {
         <div onClick={this.toggleClass} className="add-post">
           <img className="add-post__icon" src={addIcon} />
         </div>
-        <div className="modal" style={{ display: `${this.state.active}` }}>
+        <div className="modal" style={{ display: `${this.state.active}`, position: "fixed" }}>
           <div className="modal__content">
             <h2 className="modal__content-header">Create New</h2>
             <div className="modal__content-container">

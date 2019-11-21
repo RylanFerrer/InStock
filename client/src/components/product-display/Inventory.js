@@ -64,7 +64,13 @@ export default class Inventory extends Component {
       });
     });
   }
-
+  refreshTable = () => {
+    axios.get("http://localhost:5000/products").then(res => {
+      this.setState({
+        products: [res.data]
+      })
+    });
+  }
   render() {
     //Conditional rendering. Was having trouble with ternary operator so I went to that.
     //Realistically should probable just put this heading in it's own component.
@@ -93,7 +99,7 @@ export default class Inventory extends Component {
             <span className="inventory-keys__content">Status</span>
           </div>
           <ProductTable products={this.state.products} />
-          <CreateNew locations = {this.state.locations}/>
+          <CreateNew  table = {this.refreshTable} locations = {this.state.locations}/>
         </>
       );
     } else {
