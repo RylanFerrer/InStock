@@ -100,6 +100,7 @@ class App extends React.Component {
             ></Route>
           </Switch> */}
         </BrowserRouter>
+        <CreateNew />
         <Inventory />
       </>
     );

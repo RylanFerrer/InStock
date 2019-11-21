@@ -321,6 +321,26 @@ body {
   color: blue;
 }
 
+.add-post {
+  width: 60px;
+  height: 60px;
+  background-color: #002F5F;
+  border-radius: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  bottom: 40px;
+  right: 32px;
+  z-index: 2;
+}
+
 @media only screen and (min-width: 768px) {
   .modal {
     -webkit-box-pack: center;
@@ -374,6 +394,20 @@ body {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
+  }
+  .add-post {
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    right: 64px;
+    bottom: 100px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .add-post {
+    right: 240px;
+    bottom: 120px;
   }
 }
 

@@ -1,7 +1,8 @@
 import React from "react";
 import Switch from "react-switch";
 import Select from "react-select";
-import axios from 'axios'
+import axios from "axios";
+import addIcon from "../assets/Icons/SVG/Icon-add.svg";
 export default class CreateNew extends React.Component {
   state = {
     warehouses: this.props.locations,
@@ -9,12 +10,13 @@ export default class CreateNew extends React.Component {
     checked: false,
     active: "none",
     city: "City",
-    country: "Country",
+    country: "Country"
   };
   handleChange = checked => {
     this.setState({ checked: checked });
   };
   toggleClass = () => {
+    console.log("Got clicked");
     this.setState({ active: "flex" });
   };
   cancel = () => {
@@ -38,22 +40,29 @@ export default class CreateNew extends React.Component {
     });
   };
   post = () => {
-    console.log(this.product.value, this.date.value, this.quantity.value, this.description.value)
-    if(this.product.value !== '' || this.date.value !== '' || this.quantity.value !== '')
-    {
-      axios.post('http://localhost:5000/create', {
+    console.log(
+      this.product.value,
+      this.date.value,
+      this.quantity.value,
+      this.description.value
+    );
+    if (
+      this.product.value !== "" ||
+      this.date.value !== "" ||
+      this.quantity.value !== ""
+    ) {
+      axios.post("http://localhost:5000/create", {
         warehouseId: this.state.warehouseId,
         product: this.product.value,
         date: this.date.value,
         stock: this.state.checked,
         quantity: this.quantity.value,
         description: this.description.value
-      })
+      });
     } else {
-      console.log("Please fill out all fields")
+      console.log("Please fill out all fields");
     }
-
-  }
+  };
   render() {
     const options =
       this.state.warehouses &&
@@ -63,17 +72,20 @@ export default class CreateNew extends React.Component {
 
     return (
       <>
-        <button onClick={this.toggleClass}>Open</button>
+        <div onClick={this.toggleClass} className="add-post">
+          <img className="add-post__icon" src={addIcon} />
+        </div>
+        ` <button onClick={this.toggleClass}>Click Me</button>
         <div className="modal" style={{ display: `${this.state.active}` }}>
           <div className="modal__content">
             <h2 className="modal__content-header">Create New</h2>
             <div className="modal__content-container">
-              <div className="modal__content-container-input" >
+              <div className="modal__content-container-input">
                 <h4 className="modal__content-subheader">Product</h4>
                 <input
                   className="modal__content-input"
                   placeholder="Product Name"
-                  ref = {ref => (this.product = ref)}
+                  ref={ref => (this.product = ref)}
                 ></input>
               </div>
               <div className="modal__content-container-input">
@@ -81,7 +93,7 @@ export default class CreateNew extends React.Component {
                 <input
                   className="modal__content-input"
                   placeholder="yyyy-mm-dd"
-                  ref = {ref => (this.date = ref)}
+                  ref={ref => (this.date = ref)}
                 ></input>
               </div>
               <div className="modal__content-container-input">
@@ -110,12 +122,21 @@ export default class CreateNew extends React.Component {
               </div>
               <div className="modal__content-container-input">
                 <h4 className="modal__content-subheader">Quantity</h4>
-                <input className="modal__content-input" placeholder="0"  ref = {ref => (this.quantity = ref)}></input>
+                <input
+                  className="modal__content-input"
+                  placeholder="0"
+                  ref={ref => (this.quantity = ref)}
+                ></input>
               </div>
               <div className="modal__content-status">
                 <div>
                   <h4 className="modal__content-subheader">Status</h4>
-                  <h4 className="modal__content-status-text" ref = {ref => (this.stock = ref)}>{this.state.checked === false?  "Out Of Stock":"In Stock"}</h4>
+                  <h4
+                    className="modal__content-status-text"
+                    ref={ref => (this.stock = ref)}
+                  >
+                    {this.state.checked === false ? "Out Of Stock" : "In Stock"}
+                  </h4>
                 </div>
 
                 <Switch
@@ -128,16 +149,19 @@ export default class CreateNew extends React.Component {
             <input
               className="modal__content-input  modal__content-input--description"
               placeholder="(Optional)"
-              ref = {ref => (this.description = ref)}
+              ref={ref => (this.description = ref)}
             ></input>
             <div className="modal__content-btn-container">
-              <button onClick = {this.post}className="modal__content-submit">Save</button>
+              <button onClick={this.post} className="modal__content-submit">
+                Save
+              </button>
               <h5 onClick={this.cancel} className="modal__content-cancel">
                 Cancel
               </h5>
             </div>
           </div>
         </div>
+        {/* </div> */}
       </>
     );
   }
