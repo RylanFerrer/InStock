@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import arrowRight from "../assets/Icons/SVG/Icon-arrow-right.svg";
+import SearchIcon from "../assets/Icons/SVG/Icon-search.svg";
 
 export default class Locations extends React.Component {
   state = {
@@ -41,23 +42,30 @@ export default class Locations extends React.Component {
         <section className="locations-container">
           <div className="locations-div">
             <h1 className="locations-title">Locations</h1>
-            <input
-              className="header-input"
-              type="text"
-              name="name"
-              placeholder="Search"
-            />
+            <div className="inventory-heading__searchbar">
+              <img
+                className="inventory-heading__searchbar-icon"
+                src={SearchIcon}
+              />
+              <input
+                className="header-input"
+                type="text"
+                name="name"
+                placeholder="Search"
+              />
+            </div>
           </div>
-
-          <div className="locations-keys">
-            <span className="locations-keys__warehouse">WAREHOUSE</span>
-            <span className="locations-keys__contact">CONTACT</span>
-            <span className="locations-keys__contactinfo">
-              CONTACT INFORMATION
-            </span>
-            <span className="locations-keys__categories">CATEGORIES</span>
+          <div className="locations-large">
+            <div className="locations-keys">
+              <span className="locations-keys__warehouse">WAREHOUSE</span>
+              <span className="locations-keys__contact">CONTACT</span>
+              <span className="locations-keys__contactinfo">
+                CONTACT INFORMATION
+              </span>
+              <span className="locations-keys__categories">CATEGORIES</span>
+            </div>
+            {test}
           </div>
-          {test}
         </section>
       );
     } else return <h1>Loading</h1>;

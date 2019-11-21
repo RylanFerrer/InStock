@@ -44,6 +44,10 @@ a {
   margin-bottom: 20px;
 }
 
+.head-container {
+  height: 100%;
+}
+
 .head-div {
   width: 100%;
 }
@@ -57,7 +61,7 @@ a {
   margin-left: 33vw;
 }
 
-.head__nav {
+.nav-link {
   text-decoration: none;
   color: #e1e1e1;
   font-size: 15px;
@@ -68,7 +72,7 @@ a {
   font-family: "avenir-demi-bold";
 }
 
-.head__nav:hover {
+.nav-link:hover {
   color: #ffffff;
   border-bottom: 3px solid #ffffff;
 }
@@ -83,39 +87,35 @@ a {
 }
 
 @media only screen and (min-width: 768px) {
-  .header {
+  .head {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     padding: 0 3.125%;
     height: 10vh;
   }
-  .header-div {
+  .head-div {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     width: 100%;
+    height: 100%;
   }
-  .header__image {
+  .head__image {
     margin-left: 10px;
     margin-right: 30px;
   }
-  .header__nav {
+  .head__nav {
     margin-left: 0;
     text-align: center;
     font-size: 15px;
     margin: 0 30px;
     width: 80px;
   }
-  .nav-container {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
 }
 
 @media only screen and (min-width: 1440px) {
-  .header {
+  .head {
     height: 80px;
     background-color: #323232;
     display: -webkit-box;
@@ -129,13 +129,13 @@ a {
         -ms-flex-align: center;
             align-items: center;
   }
-  .header-div {
+  .head-div {
     width: 100%;
   }
-  .header__image {
+  .head__image {
     margin-left: 180px;
   }
-  .header__nav {
+  .head__nav {
     margin-left: 0;
     text-align: center;
     margin-right: 10px;
@@ -143,7 +143,7 @@ a {
     color: #e1e1e1;
     font-size: 12px;
   }
-  .header__nav:hover {
+  .head__nav:hover {
     color: white;
     border-bottom: 3px solid white;
   }
@@ -699,6 +699,7 @@ a {
   background-color: #fafafa;
   border: 1px solid #e1e1e1;
   border-radius: 4px;
+  border-left: none;
 }
 
 .location {
@@ -770,7 +771,10 @@ a {
     width: calc(100vw - 48px);
   }
   .location-row__remove {
-    margin-right: 0vw;
+    margin-right: 3vw;
+  }
+  .locations-title {
+    font-size: 36px;
   }
 }
 
@@ -824,6 +828,12 @@ a {
   }
   .location-row__remove {
     margin-right: 12vw;
+  }
+  .locations-large {
+    margin-top: 3vh;
+  }
+  .locations-title {
+    font-size: 36px;
   }
 }
 
