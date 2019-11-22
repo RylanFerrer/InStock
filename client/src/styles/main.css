@@ -210,8 +210,8 @@ a {
 }
 
 .table-row__remove {
-  position: absolute;
-  right: 0;
+  z-index: 5;
+  right: 0px;
   height: 72px;
   width: 161px;
   display: -webkit-box;

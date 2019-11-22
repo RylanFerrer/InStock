@@ -37,8 +37,10 @@
     }
 
     &__remove {
-      position: absolute;
-      right: 0;
+      // position: absolute;
+      // float: right;
+      z-index: 5;
+      right: 0px;
       height: 72px;
       width: 161px;
       display: flex;
