@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import kebab from "../../assets/Icons/SVG/Icon-kebab-default.svg";
+import axios from "axios";
 
 export default class RemoveButton extends Component {
   state = {
@@ -13,10 +14,19 @@ export default class RemoveButton extends Component {
     console.log(this.state);
   };
 
+  deleteProduct = () => {
+    axios
+      .delete(`http://localhost:5000/products/${this.props.productID}`)
+      .then(res => {
+        this.props.updateFunction();
+      });
+  };
   render() {
-    let test =
+    let removeProduct =
       this.state.remove === true ? (
-        <div className="table-row__remove-div">Remove</div>
+        <div className="table-row__remove-div" onClick={this.deleteProduct}>
+          Remove
+        </div>
       ) : (
         <></>
       );
@@ -27,7 +37,7 @@ export default class RemoveButton extends Component {
           onClick={this.click}
           src={kebab}
         />
-        {test}
+        {removeProduct}
       </div>
     );
   }

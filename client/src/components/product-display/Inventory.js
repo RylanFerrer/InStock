@@ -52,10 +52,10 @@ export default class Inventory extends Component {
   //rendering can occur
   componentDidMount() {
     axios.get("http://localhost:5000/locations").then(res => {
-        this.setState({
-          locations: [res.data]
-        })
-    })
+      this.setState({
+        locations: [res.data]
+      });
+    });
 
     axios.get("http://localhost:5000/products").then(res => {
       // console.log(res.data);
@@ -64,13 +64,16 @@ export default class Inventory extends Component {
       });
     });
   }
+
   refreshTable = () => {
     axios.get("http://localhost:5000/products").then(res => {
       this.setState({
         products: [res.data]
-      })
+      });
+      console.log(res.data);
+      console.log(this.state);
     });
-  }
+  };
   render() {
     //Conditional rendering. Was having trouble with ternary operator so I went to that.
     //Realistically should probable just put this heading in it's own component.
@@ -98,8 +101,14 @@ export default class Inventory extends Component {
             <span className="inventory-keys__content">Quantity</span>
             <span className="inventory-keys__content">Status</span>
           </div>
-          <ProductTable products={this.state.products} />
-          <CreateNew  table = {this.refreshTable} locations = {this.state.locations}/>
+          <ProductTable
+            table={this.refreshTable}
+            products={this.state.products}
+          />
+          <CreateNew
+            table={this.refreshTable}
+            locations={this.state.locations}
+          />
         </>
       );
     } else {
