@@ -10,10 +10,12 @@
 .table {
   width: calc(100vw - 32px);
   margin: $center;
+  //Resolve Link issue attempts
+  position: relative;
 
   &-row {
     border-bottom: 1px solid $mercury;
-    position: relative;
+    // position: relative;
     margin-top: 32px;
     display: flex;
     flex-direction: column;
@@ -37,10 +39,10 @@
     }
 
     &__remove {
-      // position: absolute;
-      // float: right;
-      z-index: 5;
-      right: 0px;
+      position: absolute;
+      z-index: 2;
+      right: 8px;
+      top: 4px;
       height: 72px;
       width: 161px;
       display: flex;
@@ -85,6 +87,7 @@
 
   .table {
     width: calc(100vw - 48px);
+    height: 100px;
 
     //Issue with the padding: mockup says the row height should be 100px and padding 24px but those dimensions don't
     //display as they appear on the screen. Group decision??
@@ -127,6 +130,7 @@
 
       &__remove {
         top: 36px;
+        right: 0;
         &-button {
           height: 24px;
         }

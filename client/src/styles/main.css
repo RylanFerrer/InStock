@@ -161,11 +161,11 @@ a {
 .table {
   width: calc(100vw - 32px);
   margin: 0 auto;
+  position: relative;
 }
 
 .table-row {
   border-bottom: 1px solid #e1e1e1;
-  position: relative;
   margin-top: 32px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -210,8 +210,10 @@ a {
 }
 
 .table-row__remove {
-  z-index: 5;
-  right: 0px;
+  position: absolute;
+  z-index: 2;
+  right: 8px;
+  top: 4px;
   height: 72px;
   width: 161px;
   display: -webkit-box;
@@ -268,6 +270,7 @@ a {
   }
   .table {
     width: calc(100vw - 48px);
+    height: 100px;
   }
   .table-row {
     margin-top: unset;
@@ -311,6 +314,7 @@ a {
   }
   .table-row__remove {
     top: 36px;
+    right: 0;
   }
   .table-row__remove-button {
     height: 24px;
@@ -463,7 +467,7 @@ a {
   position: fixed;
   bottom: 40px;
   right: 32px;
-  z-index: 0;
+  z-index: 3;
 }
 
 @media only screen and (min-width: 768px) {
