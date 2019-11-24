@@ -54,6 +54,11 @@ export default class CreateNew extends React.Component {
         description: this.description.value
       }).then(res => {
         this.props.table()
+        this.product.value = "" 
+        this.date.value = "" 
+        this.quantity.value = ""
+        this.description.value = ""
+        
       })
     } else {
       alert("Please fill out all fields");

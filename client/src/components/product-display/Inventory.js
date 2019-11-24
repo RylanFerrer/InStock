@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ProductTable from "./ProductTable";
-import SearchIcon from "../../assets/Icons/SVG/Icon-search.svg";
+import InventoryHeading from "./InventoryHeading";
 import axios from "axios";
 import CreateNew from "../CreateNew";
 
@@ -38,11 +38,10 @@ export default class Inventory extends Component {
       });
       console.log(this.state.products);
     });
-    }, 500);
+    }, 150);
     
   };
   changeMobile = () => {
-    console.log("mobile change")
     this.setState({
       mobile: !this.state.mobile
     })
@@ -56,20 +55,7 @@ export default class Inventory extends Component {
       {
         return (
           <>
-            <div className="inventory-heading">
-              <h1 className="inventory-heading__title">Inventory</h1>
-              <div className="inventory-heading__searchbar">
-                <img
-                  className="inventory-heading__searchbar-icon"
-                  src={SearchIcon}
-                />
-                <input
-                  className="inventory-heading__searchbar-input"
-                  type="text"
-                  placeholder="Search"
-                ></input>
-              </div>
-            </div>
+            <InventoryHeading/>
             <div className="inventory-keys">
               <span className="inventory-keys__content">Item</span>
               <span className="inventory-keys__content">Last Ordered</span>
@@ -89,9 +75,8 @@ export default class Inventory extends Component {
             />
           </>
         );
-      }  else {
+      } 
         return <><CreateNew   changeMobile = {this.changeMobile}     table={this.refreshTable} locations={this.state.locations}  mobile = {this.state.mobile}/> </>
-      }
      
     } else {
       return <h1>Loading</h1>;
