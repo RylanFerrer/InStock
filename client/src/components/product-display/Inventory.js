@@ -8,45 +8,9 @@ export default class Inventory extends Component {
   //setting initial state so that it can be used in conditional rendering.
   state = {
     locations: [],
-    products: []
+    products: [],
+    mobile: false
   };
-
-  //Can take this out, but we'll leave it for now - just in case.
-  // array = [
-  //   {
-  //     item: "name",
-  //     description: "description of item",
-  //     ordered_by: "John Doe",
-  //     last_ordered: "5/24/2018",
-  //     quantity: "1200",
-  //     reference_number: "123456789",
-  //     location: "Toronto, ON",
-  //     status: "In Stock",
-  //     key: 123456
-  //   },
-  //   {
-  //     item: "Another Name",
-  //     description: "this is goint to be wild",
-  //     ordered_by: "name 2",
-  //     last_ordered: "5/24/2018",
-  //     quantity: "54000",
-  //     reference_number: "123456789",
-  //     location: "Toronto, ON",
-  //     status: "In Stock",
-  //     key: 99876
-  //   },
-  //   {
-  //     item: "Cracker",
-  //     description: "Salty and that's about it",
-  //     ordered_by: "Lebron James",
-  //     last_ordered: "5/24/2018",
-  //     quantity: "13000",
-  //     reference_number: "123456789",
-  //     location: "Toronto, ON",
-  //     status: "In Stock",
-  //     key: 563920
-  //   }
-  // ];
 
   //Using this part of the lifecycle to retreive product information and set state so that
   //rendering can occur
@@ -59,6 +23,7 @@ export default class Inventory extends Component {
 
     axios.get("http://localhost:5000/products").then(res => {
       // console.log(res.data);
+      
       this.setState({
         products: [res.data]
       });
@@ -66,51 +31,68 @@ export default class Inventory extends Component {
   }
 
   refreshTable = () => {
-    axios.get("http://localhost:5000/products").then(res => {
+    setTimeout(() => {
+      axios.get("http://localhost:5000/products").then(res => {
       this.setState({
         products: [res.data]
       });
-      console.log(res.data);
-      console.log(this.state);
+      console.log(this.state.products);
     });
+    }, 500);
+    
   };
+  changeMobile = () => {
+    console.log("mobile change")
+    this.setState({
+      mobile: !this.state.mobile
+    })
+  }
+  
   render() {
     //Conditional rendering. Was having trouble with ternary operator so I went to that.
     //Realistically should probable just put this heading in it's own component.
     if (this.state.products.length >= 1) {
-      return (
-        <>
-          <div className="inventory-heading">
-            <h1 className="inventory-heading__title">Inventory</h1>
-            <div className="inventory-heading__searchbar">
-              <img
-                className="inventory-heading__searchbar-icon"
-                src={SearchIcon}
-              />
-              <input
-                className="inventory-heading__searchbar-input"
-                type="text"
-                placeholder="Search"
-              ></input>
+      if(this.state.mobile === false )
+      {
+        return (
+          <>
+            <div className="inventory-heading">
+              <h1 className="inventory-heading__title">Inventory</h1>
+              <div className="inventory-heading__searchbar">
+                <img
+                  className="inventory-heading__searchbar-icon"
+                  src={SearchIcon}
+                />
+                <input
+                  className="inventory-heading__searchbar-input"
+                  type="text"
+                  placeholder="Search"
+                ></input>
+              </div>
             </div>
-          </div>
-          <div className="inventory-keys">
-            <span className="inventory-keys__content">Item</span>
-            <span className="inventory-keys__content">Last Ordered</span>
-            <span className="inventory-keys__content">Location</span>
-            <span className="inventory-keys__content">Quantity</span>
-            <span className="inventory-keys__content">Status</span>
-          </div>
-          <ProductTable
-            table={this.refreshTable}
-            products={this.state.products}
-          />
-          <CreateNew
-            table={this.refreshTable}
-            locations={this.state.locations}
-          />
-        </>
-      );
+            <div className="inventory-keys">
+              <span className="inventory-keys__content">Item</span>
+              <span className="inventory-keys__content">Last Ordered</span>
+              <span className="inventory-keys__content">Location</span>
+              <span className="inventory-keys__content">Quantity</span>
+              <span className="inventory-keys__content">Status</span>
+            </div>
+            <ProductTable
+              refreshTable={this.refreshTable}
+              products={this.state.products}
+            />
+            <CreateNew
+              mobile = {this.state.mobile}
+              changeMobile = {this.changeMobile}
+              table={this.refreshTable}
+              locations={this.state.locations}
+            />
+          </>
+        );
+      }  else {
+        return <><CreateNew   changeMobile = {this.changeMobile}     table={this.refreshTable} locations={this.state.locations}  mobile = {this.state.mobile}/> </>
+      }
+     
     } else {
       return <h1>Loading</h1>;
     }

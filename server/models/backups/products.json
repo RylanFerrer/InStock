@@ -8,8 +8,8 @@
     "reference_number": "123456789",
     "location": "Toronto, ON",
     "status": "In Stock",
-    "key": 123456,
-    "warehouseID":1234,
+    "key": "123456",
+    "warehouseID":"1234",
     "categories": " Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation"
   },
   {
@@ -21,8 +21,8 @@
     "reference_number": "123456789",
     "location": "Toronto, ON",
     "status": "In Stock",
-    "key": 99876,
-    "warehouseID": 1234,
+    "key": "99876",
+    "warehouseID": "1234",
     "categories": " Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation"
   },
   {
@@ -34,8 +34,8 @@
     "reference_number": "542039",
     "location": "Toronto, ON",
     "status": "In Stock",
-    "key": 99876,
-    "warehouseID": 1234,
+    "key": "99a76",
+    "warehouseID": "1234",
     "categories": " Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation"
   },
   {
@@ -47,7 +47,7 @@
     "reference_number": "123456789",
     "location": "Vancouver, BC ",
     "status": "In Stock",
-    "key": 563920,
+    "key": "563920",
     "warehouseID":  "12d40",
     "categories": "Good Food"
   },
@@ -60,7 +60,7 @@
     "reference_number": "123456789",
     "location": "Vancouver, BC ",
     "status": "In Stock",
-    "key": 4232,
+    "key": "4232",
     "warehouseID":  "12d40",
     "categories": "Good Food"
   },
@@ -73,7 +73,7 @@
     "reference_number": "123456789",
     "location": "Vancouver, BC ",
     "status": "In Stock",
-    "key": 65424,
+    "key": "65424",
     "warehouseID":  "12d40",
     "categories": "Good Food"
   },
@@ -86,7 +86,7 @@
     "reference_number": "123456789",
     "location": "Calgary, Alberta",
     "status": "In Stock",
-    "key": 309345,
+    "key": "309345",
     "warehouseID": "90210",
     "categories": "Cheap Gas"
   },
@@ -99,7 +99,7 @@
     "reference_number": "123456789",
     "location": "Calgary, Alberta",
     "status": "In Stock",
-    "key": 309345,
+    "key": "3b09345",
     "warehouseID": "90210",
     "categories": "Cheap Gas"
   },
@@ -112,7 +112,7 @@
     "reference_number": "123456789",
     "location": "Calgary, Alberta",
     "status": "In Stock",
-    "key": 3093435,
+    "key": "309343g5",
     "warehouseID": "90210",
     "categories": "Cheap Gas"
   }
