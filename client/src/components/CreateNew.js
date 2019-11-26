@@ -2,7 +2,6 @@ import React from "react";
 import Switch from "react-switch";
 import Select from "react-select";
 import axios from "axios";
-import {Link} from 'react-router-dom'
 import addIcon from "../assets/Icons/SVG/Icon-add.svg";
 export default class CreateNew extends React.Component {
   state = {
@@ -77,10 +76,10 @@ export default class CreateNew extends React.Component {
     return (
       <>
         <div onClick={() => this.props.changeMobile()} className="add-post mobile">
-          <img className="add-post__icon" src={addIcon} />
+          <img  alt = "post" className="add-post__icon" src={addIcon} />
         </div>
         <div onClick={this.toggleClass} className="add-post tablet">
-          <img className="add-post__icon" src={addIcon} />
+          <img alt = "post" className="add-post__icon" src={addIcon} />
         </div>
         <div className="modal" style={{ display: `${this.props.mobile === true ? "flex": this.state.active}`, position: `${position}` }}>
           <div className="modal__content">
