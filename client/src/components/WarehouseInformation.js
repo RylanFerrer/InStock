@@ -18,9 +18,22 @@ export default class WarehouseInformation extends Component {
           warehouse: res.data[0],
           products: [res.data[1]]
         });
-        console.log(this.state);
+        console.log(this.state.products);
       });
   }
+
+  refreshTable = () => {
+    setTimeout(() => {
+      axios
+        .get(`http://localhost:5000/locations/${this.props.match.params.id}`)
+        .then(result => {
+          console.log(result.data);
+          this.setState({
+            products: [result.data[1]]
+          });
+        });
+    }, 300);
+  };
 
   render() {
     if (
@@ -32,7 +45,11 @@ export default class WarehouseInformation extends Component {
           <header className="header">
             <div className="header-container">
               <Link to="/locations">
-                <img className="header-container__image" src={Arrow} />
+                <img
+                  alt="arrow"
+                  className="header-container__image"
+                  src={Arrow}
+                />
               </Link>
               <h1 className="header-container__title">
                 {this.state.warehouse[0].name}
@@ -87,7 +104,10 @@ export default class WarehouseInformation extends Component {
               <span className="inventory-keys__content">Quantity</span>
               <span className="inventory-keys__content">Status</span>
             </div>
-            <ProductTable products={this.state.products} />
+            <ProductTable
+              refreshTable={this.refreshTable}
+              products={this.state.products}
+            />
           </section>
         </>
       );

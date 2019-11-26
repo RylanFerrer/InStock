@@ -1,10 +1,7 @@
 import React from "react";
-import kebab from "../../assets/Icons/SVG/Icon-kebab-default.svg";
 import { Link } from "react-router-dom";
-import CreateNew from '../CreateNew'
 import RemoveButton from "./Remove-button";
 import Axios from "axios";
-import { truncateSync } from "fs";
 
 export default class ProductTable extends React.Component {
   state = {

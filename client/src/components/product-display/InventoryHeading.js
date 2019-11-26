@@ -6,6 +6,7 @@ export default function InventoryHeading() {
         <h1 className="inventory-heading__title">Inventory</h1>
         <div className="inventory-heading__searchbar">
           <img
+            alt = "search"
             className="inventory-heading__searchbar-icon"
             src={SearchIcon}
           />

@@ -48,6 +48,7 @@ export default class Locations extends React.Component {
                 </div>
                 <div className="location-row__remove">
                   <img
+                    alt="remove"
                     className="location-row__remove-button"
                     src={arrowRight}
                   />
@@ -65,6 +66,7 @@ export default class Locations extends React.Component {
                 <h1 className="locations-title">Locations</h1>
                 <div className="inventory-heading__searchbar">
                   <img
+                    alt="search"
                     className="inventory-heading__searchbar-icon"
                     src={SearchIcon}
                   />
@@ -75,17 +77,19 @@ export default class Locations extends React.Component {
                     placeholder="Search"
                   />
                 </div>
-              </div>
-              <div className="locations-large">
-                <div className="locations-keys">
-                  <span className="locations-keys__warehouse">WAREHOUSE</span>
-                  <span className="locations-keys__contact">CONTACT</span>
-                  <span className="locations-keys__contactinfo">
-                    CONTACT INFORMATION
-                  </span>
-                  <span className="locations-keys__categories">CATEGORIES</span>
+                <div className="locations-large">
+                  <div className="locations-keys">
+                    <span className="locations-keys__warehouse">WAREHOUSE</span>
+                    <span className="locations-keys__contact">CONTACT</span>
+                    <span className="locations-keys__contactinfo">
+                      CONTACT INFORMATION
+                    </span>
+                    <span className="locations-keys__categories">
+                      CATEGORIES
+                    </span>
+                  </div>
+                  {warehouse}
                 </div>
-                {warehouse}
               </div>
             </section>
             <CreateNewWarehouse
@@ -98,12 +102,11 @@ export default class Locations extends React.Component {
       }
       return (
         <>
-          {" "}
           <CreateNewWarehouse
             refreshTable={this.refreshTable}
             mobile={this.state.mobile}
             changeMobile={this.changeMobile}
-          />{" "}
+          />
         </>
       );
     } else return <h1>Loading</h1>;
