@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Arrow from "../assets/Icons/SVG/Icon-back-arrow.svg";
 import ProductTable from "./product-display/ProductTable";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default class WarehouseInformation extends Component {
   state = {
@@ -30,7 +31,9 @@ export default class WarehouseInformation extends Component {
         <>
           <header className="header">
             <div className="header-container">
-              <img className="header-container__image" src={Arrow} />
+              <Link to="/locations">
+                <img className="header-container__image" src={Arrow} />
+              </Link>
               <h1 className="header-container__title">
                 {this.state.warehouse[0].name}
               </h1>

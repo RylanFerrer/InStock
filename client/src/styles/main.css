@@ -94,6 +94,9 @@ a {
     padding: 0 3.125%;
     height: 10vh;
   }
+  .head-container {
+    margin-top: 12.5px;
+  }
   .head-div {
     display: -webkit-box;
     display: -ms-flexbox;
