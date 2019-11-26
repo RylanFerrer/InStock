@@ -32,5 +32,18 @@ router.post("/", (req, res) => {
   helper.writeJSONFile(products,productData);
   return res.status(200).json(productData);
 });
+router.post("/location", (req, res) => {
+
+  const newWarehouse = {
+    id: helper.createID(),
+    ...req.body,
+    role: "Manager",
+    contactinfo: "+1 555-555-5555",
+    email: `${req.body.manager}@email.com`,
+  }
+  warehouseData.push(newWarehouse);
+  helper.writeJSONFile(warehouse, warehouseData);
+  return res.status(200).json(warehouseData)
+});
 
 module.exports = router;

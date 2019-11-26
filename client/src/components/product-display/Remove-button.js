@@ -18,7 +18,7 @@ export default class RemoveButton extends Component {
     axios
       .delete(`http://localhost:5000/products/${this.props.productID}`)
       .then(res => {
-        this.props.updateFunction();
+        this.props.refreshTable();
       });
   };
   render() {

@@ -2,6 +2,7 @@ import React from "react";
 import Switch from "react-switch";
 import Select from "react-select";
 import axios from "axios";
+import {Link} from 'react-router-dom'
 import addIcon from "../assets/Icons/SVG/Icon-add.svg";
 export default class CreateNew extends React.Component {
   state = {
@@ -39,12 +40,6 @@ export default class CreateNew extends React.Component {
     });
   };
   post = () => {
-    console.log(
-      this.product.value,
-      this.date.value,
-      this.quantity.value,
-      this.description.value
-    );
     if (
       this.product.value !== "" ||
       this.date.value !== "" ||
@@ -59,12 +54,20 @@ export default class CreateNew extends React.Component {
         description: this.description.value
       }).then(res => {
         this.props.table()
+        this.product.value = "" 
+        this.date.value = "" 
+        this.quantity.value = ""
+        this.description.value = ""
+        
       })
     } else {
       alert("Please fill out all fields");
     }
   };
+  
   render() {
+  
+    const position = this.props.mobile === true ? "none": "fixed"
     const options =
       this.state.warehouses &&
       this.state.warehouses.map(loc => {
@@ -73,10 +76,13 @@ export default class CreateNew extends React.Component {
 
     return (
       <>
-        <div onClick={this.toggleClass} className="add-post">
+        <div onClick={() => this.props.changeMobile()} className="add-post mobile">
           <img className="add-post__icon" src={addIcon} />
         </div>
-        <div className="modal" style={{ display: `${this.state.active}`, position: "fixed" }}>
+        <div onClick={this.toggleClass} className="add-post tablet">
+          <img className="add-post__icon" src={addIcon} />
+        </div>
+        <div className="modal" style={{ display: `${this.props.mobile === true ? "flex": this.state.active}`, position: `${position}` }}>
           <div className="modal__content">
             <h2 className="modal__content-header">Create New</h2>
             <div className="modal__content-container">
@@ -155,7 +161,10 @@ export default class CreateNew extends React.Component {
               <button onClick={this.post} className="modal__content-submit">
                 Save
               </button>
-              <h5 onClick={this.cancel} className="modal__content-cancel">
+              <h5 onClick={() => this.props.changeMobile()} className="modal__content-cancel mobile">
+                Cancel
+              </h5>
+              <h5 onClick={this.cancel} className="modal__content-cancel tablet">
                 Cancel
               </h5>
             </div>

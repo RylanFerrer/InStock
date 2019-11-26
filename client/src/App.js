@@ -101,6 +101,7 @@ class App extends React.Component {
                 </>
               )}
             />
+            <Route exact path={`/mobile`} component={CreateNew} />
             <Route
               path="/:id"
               render={props => {
