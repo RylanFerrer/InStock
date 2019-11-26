@@ -33,6 +33,7 @@ export default class RemoveButton extends Component {
     return (
       <div className="table-row__remove">
         <img
+          alt = "kebab"
           className="table-row__remove-button"
           onClick={this.click}
           src={kebab}

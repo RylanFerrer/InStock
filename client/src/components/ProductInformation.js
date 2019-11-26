@@ -40,7 +40,7 @@ export default class ProductInformation extends Component {
           <header className="header">
             <div className="header-container">
               <Link to="/">
-                <img className="header-container__image" src={Arrow} />
+                <img  alt = "arrow" className="header-container__image" src={Arrow} />
               </Link>
               {/* <h1 className="header-container__title">Product Name</h1> */}
               <h1 className="header-container__title">{itemInfo.item}</h1>

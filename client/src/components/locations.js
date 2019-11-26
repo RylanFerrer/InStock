@@ -48,6 +48,7 @@ export default class Locations extends React.Component {
                 </div>
                 <div className="location-row__remove">
                   <img
+                    alt = "remove"
                     className="location-row__remove-button"
                     src={arrowRight}
                   />
@@ -64,6 +65,7 @@ export default class Locations extends React.Component {
               <h1 className="locations-title">Locations</h1>
               <div className="inventory-heading__searchbar">
                 <img
+                  alt = "search" 
                   className="inventory-heading__searchbar-icon"
                   src={SearchIcon}
                 />
