@@ -77,19 +77,17 @@ export default class Locations extends React.Component {
                     placeholder="Search"
                   />
                 </div>
-                <div className="locations-large">
-                  <div className="locations-keys">
-                    <span className="locations-keys__warehouse">WAREHOUSE</span>
-                    <span className="locations-keys__contact">CONTACT</span>
-                    <span className="locations-keys__contactinfo">
-                      CONTACT INFORMATION
-                    </span>
-                    <span className="locations-keys__categories">
-                      CATEGORIES
-                    </span>
-                  </div>
-                  {warehouse}
+              </div>
+              <div className="locations-large">
+                <div className="locations-keys">
+                  <span className="locations-keys__warehouse">WAREHOUSE</span>
+                  <span className="locations-keys__contact">CONTACT</span>
+                  <span className="locations-keys__contactinfo">
+                    CONTACT INFORMATION
+                  </span>
+                  <span className="locations-keys__categories">CATEGORIES</span>
                 </div>
+                {warehouse}
               </div>
             </section>
             <CreateNewWarehouse
