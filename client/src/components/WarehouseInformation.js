@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Arrow from "../assets/Icons/SVG/Icon-back-arrow.svg";
 import ProductTable from "./product-display/ProductTable";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default class WarehouseInformation extends Component {
   state = {
@@ -20,19 +21,19 @@ export default class WarehouseInformation extends Component {
         console.log(this.state.products);
       });
   }
- 
 
   refreshTable = () => {
     setTimeout(() => {
-      axios.get(`http://localhost:5000/locations/${this.props.match.params.id}`).then(result => {
-        console.log(result.data)
-      this.setState({
-        products: [result.data[1]]
-      });
-    
-    });
+      axios
+        .get(`http://localhost:5000/locations/${this.props.match.params.id}`)
+        .then(result => {
+          console.log(result.data);
+          this.setState({
+            products: [result.data[1]]
+          });
+        });
     }, 300);
-  }
+  };
 
   render() {
     if (
@@ -43,7 +44,13 @@ export default class WarehouseInformation extends Component {
         <>
           <header className="header">
             <div className="header-container">
-              <img  alt = "arrow" className="header-container__image" src={Arrow} />
+              <Link to="/locations">
+                <img
+                  alt="arrow"
+                  className="header-container__image"
+                  src={Arrow}
+                />
+              </Link>
               <h1 className="header-container__title">
                 {this.state.warehouse[0].name}
               </h1>
@@ -97,7 +104,10 @@ export default class WarehouseInformation extends Component {
               <span className="inventory-keys__content">Quantity</span>
               <span className="inventory-keys__content">Status</span>
             </div>
-            <ProductTable  refreshTable={this.refreshTable}  products={this.state.products} />
+            <ProductTable
+              refreshTable={this.refreshTable}
+              products={this.state.products}
+            />
           </section>
         </>
       );

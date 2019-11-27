@@ -9,7 +9,7 @@
     "location": "Toronto, ON",
     "status": "In Stock",
     "key": "123456",
-    "warehouseID":"1234",
+    "warehouseID": "1234",
     "categories": " Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation"
   },
   {
@@ -48,7 +48,7 @@
     "location": "Vancouver, BC ",
     "status": "In Stock",
     "key": "563920",
-    "warehouseID":  "12d40",
+    "warehouseID": "12d40",
     "categories": "Good Food"
   },
   {
@@ -61,7 +61,7 @@
     "location": "Vancouver, BC ",
     "status": "In Stock",
     "key": "4232",
-    "warehouseID":  "12d40",
+    "warehouseID": "12d40",
     "categories": "Good Food"
   },
   {
@@ -74,7 +74,7 @@
     "location": "Vancouver, BC ",
     "status": "In Stock",
     "key": "65424",
-    "warehouseID":  "12d40",
+    "warehouseID": "12d40",
     "categories": "Good Food"
   },
   {

@@ -51,6 +51,10 @@
     // width: 104%;
     height: 10vh;
 
+    &-container {
+      height: 100%;
+    }
+
     &-div {
       display: flex;
       width: 100%;
@@ -69,6 +73,11 @@
       margin: 0 30px;
       width: 80px;
     }
+  }
+  .image-link {
+    height: 100%;
+    display: flex;
+    align-items: center;
   }
 }
 
